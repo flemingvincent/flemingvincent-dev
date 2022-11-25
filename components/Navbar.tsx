@@ -15,15 +15,31 @@ const Navbar = () => {
   return (
     <>
       {isToggle ? (
-        <nav className="w-full h-full bg-[#010101] flex flex-col space-y-8 pt-4 text-sm font-mono">
-          <button className="w-full flex justify-end" onClick={handleToggle}>
-            <XMarkIcon className="h-6 w-6" />
-          </button>
-          <Link href="/">// Home</Link>
-          <Link href="/technologies">// Technologies</Link>
-          <Link href="/work">// Work</Link>
-          <Link href="/experience">// Experience</Link>
-          <Link href="/contact">// Contact</Link>
+        <nav className="absolute w-full h-full bg-[#010101f1] backdrop-blur-md flex flex-col space-y-8 pt-4 text-sm font-mono">
+          <div>
+            <Logo />
+            <button
+              className="absolute top-4 right-12 hover:text-[#39ff14]"
+              onClick={handleToggle}
+            >
+              <XMarkIcon className="h-6 w-6" />
+            </button>
+          </div>
+          <Link href="/" className="hover:text-[#39ff14]">
+            // Home
+          </Link>
+          <Link href="/technologies" className="hover:text-[#39ff14]">
+            // Technologies
+          </Link>
+          <Link href="/work" className="hover:text-[#39ff14]">
+            // Work
+          </Link>
+          <Link href="/experience" className="hover:text-[#39ff14]">
+            // Experience
+          </Link>
+          <Link href="/contact" className="hover:text-[#39ff14]">
+            // Contact
+          </Link>
         </nav>
       ) : (
         <nav className="w-full flex flex-1 flex-row items-center justify-between pt-4">
@@ -33,11 +49,19 @@ const Navbar = () => {
           </button>
           <div className="hidden lg:flex text-sm font-mono text-white">
             <div className="border-r border-r-white space-x-8">
-              <Link href="/">// Home</Link>
-              <Link href="/technologies">// Technologies</Link>
-              <Link href="/work">// Work</Link>
-              <Link href="/experience">// Experience</Link>
-              <Link href="/contact" className="pr-8">
+              <Link href="/" className="hover:text-[#39ff14]">
+                // Home
+              </Link>
+              <Link href="/technologies" className="hover:text-[#39ff14]">
+                // Technologies
+              </Link>
+              <Link href="/work" className="hover:text-[#39ff14]">
+                // Work
+              </Link>
+              <Link href="/experience" className="hover:text-[#39ff14]">
+                // Experience
+              </Link>
+              <Link href="/contact" className="pr-8 hover:text-[#39ff14]">
                 // Contact
               </Link>
             </div>
