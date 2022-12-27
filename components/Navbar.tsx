@@ -15,11 +15,11 @@ const Navbar = () => {
   return (
     <>
       {isToggle ? (
-        <nav className="absolute w-full h-full bg-[#010101f1] backdrop-blur-md flex flex-col space-y-8 pt-4 text-sm font-mono">
+        <nav className="absolute w-[100vw] h-[100vh] bg-[#010101f1] backdrop-blur-md flex flex-col space-y-8 pt-4 text-sm font-mono px-6">
           <div>
             <Logo />
             <button
-              className="absolute top-4 right-12 hover:text-[#39ff14]"
+              className="absolute top-4 right-6 hover:text-[#39ff14]"
               onClick={handleToggle}
             >
               <XMarkIcon className="h-6 w-6" />
@@ -42,7 +42,7 @@ const Navbar = () => {
           </Link>
         </nav>
       ) : (
-        <nav className="w-full flex flex-1 flex-row items-center justify-between pt-4">
+        <nav className="w-full flex flex-1 flex-row items-center justify-between pt-4 px-6">
           <Logo />
           <button className="flex lg:hidden" onClick={handleToggle}>
             <Bars4Icon className="h-6 w-6" />

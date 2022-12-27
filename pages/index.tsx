@@ -10,7 +10,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/fvlogo.svg" />
       </Head>
 
-      <main className="w-full h-screen px-6 bg-[#010101] text-white">
+      <main className="w-[100vw] h-[100vh] bg-[#010101] text-white">
         <Navbar />
         <div className="flex flex-col items-center justify-center h-[calc(100vh-40px)]">
           <h1 className="font-inter font-bold text-4xl md:text-6xl lg:text-8xl inline-flex items-center">
