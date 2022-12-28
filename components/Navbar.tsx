@@ -15,7 +15,7 @@ const Navbar = () => {
   return (
     <>
       {isToggle ? (
-        <nav className="absolute w-[100vw] h-[100vh] bg-[#010101f1] backdrop-blur-md flex flex-col space-y-8 pt-4 text-sm font-mono px-6">
+        <nav className="absolute w-[100vw] h-[100vh] bg-[#010101f1] backdrop-blur-sm flex flex-col space-y-8 pt-4 text-sm font-mono px-6">
           <div>
             <Logo />
             <button
