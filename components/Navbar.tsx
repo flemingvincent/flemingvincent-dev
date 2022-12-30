@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
-import Logo from "../assets/fvlogo.svg";
-import Github from "../assets/github.svg";
-import Linkedin from "../assets/linkedin.svg";
+import { motion } from "framer-motion";
+
 import { Bars4Icon, XMarkIcon } from "@heroicons/react/24/solid";
 
 const Navbar = () => {
@@ -14,71 +14,65 @@ const Navbar = () => {
   };
   return (
     <>
-      {isToggle ? (
-        <nav className="absolute w-[100vw] h-[100vh] bg-[#010101f1] backdrop-blur-sm flex flex-col space-y-8 pt-4 text-sm font-mono px-6">
-          <div>
-            <Logo />
-            <button
-              className="absolute top-4 right-6 hover:text-[#39ff14]"
-              onClick={handleToggle}
-            >
-              <XMarkIcon className="h-6 w-6" />
-            </button>
-          </div>
-          <Link href="/" className="hover:text-[#39ff14]">
-            // Home
-          </Link>
-          <Link href="/technologies" className="hover:text-[#39ff14]">
-            // Technologies
-          </Link>
-          <Link href="/work" className="hover:text-[#39ff14]">
-            // Work
-          </Link>
-          <Link href="/experience" className="hover:text-[#39ff14]">
-            // Experience
-          </Link>
-          <Link href="/contact" className="hover:text-[#39ff14]">
-            // Contact
-          </Link>
-        </nav>
-      ) : (
-        <nav className="w-full flex flex-1 flex-row items-center justify-between pt-4 px-6">
-          <Logo />
-          <button className="flex lg:hidden" onClick={handleToggle}>
+      <nav className="sticky w-full flex flex-1 flex-row items-center justify-between py-4 px-6">
+        <motion.div
+          animate={{ rotate: 360 }}
+          transition={{
+            duration: 2,
+            repeat: Infinity,
+            repeatDelay: 10,
+            ease: "anticipate",
+          }}
+        >
+          <Image src="/fvlogo.svg" alt="Logo" width={36} height={24} />
+        </motion.div>
+        <button className="flex lg:hidden text-white" onClick={handleToggle}>
+          {isToggle ? (
+            <XMarkIcon className="h-6 w-6" />
+          ) : (
             <Bars4Icon className="h-6 w-6" />
-          </button>
-          <div className="hidden lg:flex text-sm font-mono text-white">
-            <div className="border-r border-r-white space-x-8">
-              <Link href="/" className="hover:text-[#39ff14]">
-                // Home
-              </Link>
-              <Link href="/technologies" className="hover:text-[#39ff14]">
-                // Technologies
-              </Link>
-              <Link href="/work" className="hover:text-[#39ff14]">
-                // Work
-              </Link>
-              <Link href="/experience" className="hover:text-[#39ff14]">
-                // Experience
-              </Link>
-              <Link href="/contact" className="pr-8 hover:text-[#39ff14]">
-                // Contact
-              </Link>
-            </div>
-            <div className="flex flex-row space-x-4">
-              <a
-                className="pl-4 cursor-pointer"
-                href="https://github.com/FlemingVincent"
-              >
-                <Github />
-              </a>
-              <a href="https://www.linkedin.com/in/vincentfleming">
-                <Linkedin />
-              </a>
-            </div>
+          )}
+        </button>
+        <motion.div
+          className="hidden lg:flex text-sm text-neutral-700 font-inter"
+          initial={{ opacity: 0, x: 1000 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1, delay: 0.5, ease: "easeOut" }}
+        >
+          <div className="space-x-6">
+            <Link
+              href="/"
+              className="hover:text-white transition-colors duration-300"
+            >
+              Home
+            </Link>
+            <Link
+              href="/technologies"
+              className="hover:text-white transition-colors duration-300"
+            >
+              Technologies
+            </Link>
+            <Link
+              href="/work"
+              className="hover:text-white transition-colors duration-300"
+            >
+              Work
+            </Link>
+            <Link
+              href="/experience"
+              className="hover:text-white transition-colors duration-300"
+            >
+              Experience
+            </Link>
+            <Link
+              href="/contact"
+              className="hover:text-white transition-colors duration-300"
+            >
+              Contact
+            </Link>
           </div>
-        </nav>
-      )}
+        </motion.div>
+      </nav>
     </>
   );
 };
