@@ -14,7 +14,7 @@ const Navbar = () => {
   };
   return (
     <>
-      <nav className="sticky w-full flex flex-1 flex-row items-center justify-between py-4 px-6">
+      <nav className="w-full flex flex-1 flex-row items-center justify-between py-4 px-6">
         <motion.div
           animate={{ rotate: 360 }}
           transition={{
