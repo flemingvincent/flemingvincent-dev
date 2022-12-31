@@ -9,7 +9,7 @@ import { motion } from "framer-motion";
 
 const Home: NextPage = () => {
   return (
-    <div className="w-full h-full bg-black text-white">
+    <div className="w-full h-full bg-black text-white font-inter">
       <Head>
         <title>flemingvincent.dev</title>
         <link rel="icon" href="/fvlogo.svg" />
