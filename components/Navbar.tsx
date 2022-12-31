@@ -56,7 +56,7 @@ const Navbar = () => {
           </a>
           <a
             className="hidden mobile:flex"
-            href="https://www.linkedin.com/in/flemingvincent/"
+            href="https://www.linkedin.com/in/vincentfleming/"
           >
             <Linkedin color="#ffffff" size={24} />
           </a>
