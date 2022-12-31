@@ -29,6 +29,8 @@ const Hero = () => {
         </motion.p>
         <motion.button
           className="flex items-center justify-center w-full min-[600px]:w-[188px] h-[50px] rounded-[6px] animate-text bg-gradient-to-r from-teal-500 via-purple-500 to-orange-500 p-[2px] drop-shadow-[0_4px_4px_0_#0000001a]"
+          id="buttonTitle"
+          title="Title"
           initial={{ opacity: 0, y: 100 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 3, ease: "easeOut" }}
