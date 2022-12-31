@@ -1,79 +1,71 @@
-import React, { useState } from "react";
+import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 
 import { motion } from "framer-motion";
 
-import { Bars4Icon, XMarkIcon } from "@heroicons/react/24/solid";
+import { Github, Linkedin, Menu } from "@geist-ui/icons";
 
 const Navbar = () => {
-  const [isToggle, setIsToggle] = useState(false);
-
-  const handleToggle = () => {
-    setIsToggle(!isToggle);
-  };
   return (
-    <>
-      <nav className="w-full flex flex-1 flex-row items-center justify-between py-4 px-6">
-        <motion.div
-          animate={{ rotate: 360 }}
-          transition={{
-            duration: 2,
-            repeat: Infinity,
-            repeatDelay: 10,
-            ease: "anticipate",
-          }}
-        >
-          <Image src="/fvlogo.svg" alt="Logo" width={36} height={24} />
-        </motion.div>
-        <button className="flex lg:hidden text-white" onClick={handleToggle}>
-          {isToggle ? (
-            <XMarkIcon className="h-6 w-6" />
-          ) : (
-            <Bars4Icon className="h-6 w-6" />
-          )}
-        </button>
-        <motion.div
-          className="hidden lg:flex text-sm text-neutral-700 font-inter"
-          initial={{ opacity: 0, x: 1000 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1, delay: 0.5, ease: "easeOut" }}
-        >
-          <div className="space-x-6">
-            <Link
-              href="/"
-              className="hover:text-white transition-colors duration-300"
-            >
-              Home
-            </Link>
-            <Link
-              href="/technologies"
-              className="hover:text-white transition-colors duration-300"
-            >
+    <motion.nav
+      className="fixed top-0 h-16 w-[100vw] bg-[#00000070] backdrop-saturate-150 backdrop-blur-sm shadow-[0_1px_0_0_#ffffff1a] z-[999] flex flex-1 items-center justify-center"
+      initial={{ opacity: 0, y: -100 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1, ease: "easeOut" }}
+    >
+      <div className="flex flex-1 items-center justify-between max-w-[1200px]">
+        <div className="pl-6">
+          <Link href="/">
+            <Image
+              src="/fvlogo.svg"
+              alt="flemingvincent.dev"
+              width={36}
+              height={24}
+            />
+          </Link>
+        </div>
+        <div className="hidden mobile:flex mobile:flex-1 mobile:justify-evenly">
+          <Link href="/tech">
+            <span className="text-[#888] text-sm hover:text-white font-inter transition-colors">
               Technologies
-            </Link>
-            <Link
-              href="/work"
-              className="hover:text-white transition-colors duration-300"
-            >
+            </span>
+          </Link>
+          <Link href="/work">
+            <span className="text-[#888] text-sm hover:text-white font-inter transition-colors">
               Work
-            </Link>
-            <Link
-              href="/experience"
-              className="hover:text-white transition-colors duration-300"
-            >
+            </span>
+          </Link>
+          <Link href="/exp">
+            <span className="text-[#888] text-sm hover:text-white font-inter transition-colors">
               Experience
-            </Link>
-            <Link
-              href="/contact"
-              className="hover:text-white transition-colors duration-300"
-            >
+            </span>
+          </Link>
+          <Link href="/contact">
+            <span className="text-[#888] text-sm hover:text-white font-inter transition-colors">
               Contact
-            </Link>
+            </span>
+          </Link>
+        </div>
+        <div className="pr-6 flex flex-row gap-4">
+          <a
+            className="hidden mobile:flex"
+            href="https://github.com/FlemingVincent"
+          >
+            <Github color="#ffffff" size={24} />
+          </a>
+          <a
+            className="hidden mobile:flex"
+            href="https://www.linkedin.com/in/flemingvincent/"
+          >
+            <Linkedin color="#ffffff" size={24} />
+          </a>
+          <div className="flex mobile:hidden">
+            <Menu color="#fff" size={24} />
           </div>
-        </motion.div>
-      </nav>
-    </>
+        </div>
+      </div>
+    </motion.nav>
   );
 };
 

@@ -10,6 +10,9 @@ module.exports = {
       fontFamily: {
         inter: ["Inter", "sans-serif"],
       },
+      screens: {
+        mobile: "1150px",
+      },
       animation: {
         text: "text 5s ease infinite",
       },
