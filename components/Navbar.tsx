@@ -4,9 +4,15 @@ import Image from "next/image";
 
 import { motion } from "framer-motion";
 
-import { Github, Linkedin, Menu } from "@geist-ui/icons";
+import { Github, Linkedin, Menu, X } from "@geist-ui/icons";
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = React.useState(false);
+
+  const handleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <motion.nav
       className="fixed top-0 h-16 w-[100vw] bg-[#00000070] backdrop-saturate-150 backdrop-blur-sm shadow-[0_1px_0_0_#ffffff1a] z-[999] flex flex-1 items-center justify-center"
@@ -60,11 +66,57 @@ const Navbar = () => {
           >
             <Linkedin color="#ffffff" size={24} />
           </a>
-          <div className="flex mobile:hidden">
-            <Menu color="#fff" size={24} />
+          <div className="flex mobile:hidden" onClick={() => handleMenu()}>
+            {isOpen ? (
+              <X color="#fff" size={24} />
+            ) : (
+              <Menu color="#fff" size={24} />
+            )}
           </div>
         </div>
       </div>
+      {isOpen && (
+        <div className="absolute w-screen h-screen top-[65px] bg-black">
+          <div className="flex flex-col ">
+            <Link
+              className="flex items-center w-screen h-[50px] hover:bg-[#111111] transition-colors px-6 border-b border-b-[#333]"
+              href="/tech"
+            >
+              <span className="text-white text-base font-inter">
+                Technologies
+              </span>
+            </Link>
+            <Link
+              className="flex items-center w-screen h-[50px] hover:bg-[#111111] transition-colors px-6 border-b border-b-[#333]"
+              href="/work"
+            >
+              <span className="text-white text-base font-inter">Work</span>
+            </Link>
+            <Link
+              className="flex items-center w-screen h-[50px] hover:bg-[#111111] transition-colors px-6 border-b border-b-[#333]"
+              href="/exp"
+            >
+              <span className="text-white text-base font-inter">
+                Experience
+              </span>
+            </Link>
+            <Link
+              className="flex items-center w-screen h-[50px] hover:bg-[#111111] transition-colors px-6 border-b border-b-[#333]"
+              href="/contact"
+            >
+              <span className="text-white text-base font-inter">Contact</span>
+            </Link>
+          </div>
+          <div className="flex flex-row items-center justify-center h-[50px] px-6 gap-6">
+            <a href="https://github.com/FlemingVincent">
+              <Github color="#ffffff" size={24} />
+            </a>
+            <a href="https://www.linkedin.com/in/vincentfleming/">
+              <Linkedin color="#ffffff" size={24} />
+            </a>
+          </div>
+        </div>
+      )}
     </motion.nav>
   );
 };
