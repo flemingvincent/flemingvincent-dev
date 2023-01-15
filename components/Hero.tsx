@@ -6,9 +6,9 @@ import Marquee from "react-fast-marquee";
 
 export const Hero = () => {
 	return (
-		<div className="flex flex-col items-center justify-center gap-y-8 w-screen h-[calc(100vh-74px)] bg-[#eeeeee] dark:bg-[#111111] relative overflow-hidden">
+		<div className="flex flex-col items-center justify-center w-screen h-[calc(100vh-74px)] bg-[#eeeeee] dark:bg-[#111111] relative overflow-hidden">
 			<motion.div
-				className="flex items-center justify-center"
+				className="flex items-center justify-center mb-4"
 				initial={{ y: 200, opacity: 0 }}
 				animate={{ y: 0, opacity: 1 }}
 				transition={{
@@ -19,10 +19,8 @@ export const Hero = () => {
 					stiffness: 100,
 				}}
 			>
-				<h1 className="text-7xl tablet:text-9xl laptop:text-[12rem] text-black dark:text-white text-center font-bold tracking-tighter">
-					Developer.
-					<br />
-					Designer. Student.
+				<h1 className="text-[4rem] tablet:text-[9rem] laptop:text-[14rem] desktop:text-[22rem] text-black dark:text-white text-center font-black tracking-tighter">
+					VINCENT©
 				</h1>
 				<motion.div
 					className="absolute bg-[#aaf300] h-[24px] w-[120vw]"
@@ -45,6 +43,13 @@ export const Hero = () => {
 						2023 © Vincent Fleming © 2023 ©{" "}
 					</Marquee>
 				</motion.div>
+				<Image
+					src="/avatar.png"
+					width={120}
+					height={120}
+					alt="avatar"
+					className="hidden laptop:flex laptop:absolute"
+				/>
 			</motion.div>
 			<motion.div
 				className="flex flex-col items-center"
@@ -56,7 +61,10 @@ export const Hero = () => {
 					ease: "easeOut",
 				}}
 			>
-				<h2 className="text-base text-[#999999] text-center font-normal tablet:max-w-[50vw] px-4 mb-8">
+				<h1 className="text-[28px] text-black dark:text-white text-center font-bold tracking-tighter tablet:max-w-[50vw] mb-4">
+					Developer. Designer. Student.
+				</h1>
+				<h2 className="text-base text-[#999999] text-center font-normal tablet:max-w-[50vw] px-4 mb-6">
 					I design <span className="font-mono">body</span> with{" "}
 					<span className="font-mono">style</span> from{" "}
 					<span className="font-mono">head</span>, pushing{" "}
