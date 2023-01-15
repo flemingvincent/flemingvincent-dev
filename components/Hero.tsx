@@ -32,8 +32,6 @@ export const Hero = () => {
 						duration: 0.5,
 						delay: 1,
 						ease: "easeOut",
-						type: "spring",
-						stiffness: 100,
 					}}
 				>
 					<Marquee gradient={false} className="text-base text-black font-bold">
@@ -41,7 +39,10 @@ export const Hero = () => {
 						2023 © Vincent Fleming © 2023 © Vincent Fleming © 2023 © Vincent
 						Fleming © 2023 © Vincent Fleming © 2023 © Vincent Fleming © 2023 ©
 						Vincent Fleming © 2023 © Vincent Fleming © 2023 © Vincent Fleming ©
-						2023 © Vincent Fleming © 2023 ©
+						2023 © Vincent Fleming © 2023 © Vincent Fleming © 2023 © Vincent
+						Fleming © 2023 © Vincent Fleming © 2023 © Vincent Fleming © 2023 ©
+						Vincent Fleming © 2023 © Vincent Fleming © 2023 © Vincent Fleming ©
+						2023 © Vincent Fleming © 2023 ©{" "}
 					</Marquee>
 				</motion.div>
 			</motion.div>
@@ -75,7 +76,13 @@ export const Hero = () => {
 							<Image src="/rn.svg" width={40} height={40} alt="rn" />
 							<Image src="/tw.svg" width={40} height={40} alt="tw" />
 							<Image src="/figma.svg" width={40} height={40} alt="figma" />
-							<Image src="/expo.svg" width={40} height={40} alt="expo" />
+							<Image
+								src="/expo.svg"
+								width={40}
+								height={40}
+								alt="expo"
+								className="mr-4"
+							/>
 						</div>
 					</Marquee>
 				</div>
