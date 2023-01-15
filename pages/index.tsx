@@ -2,25 +2,35 @@ import React from "react";
 import type { NextPage } from "next";
 import Head from "next/head";
 
-import Navbar from "components/Navbar";
-import Hero from "components/Hero";
-
-import { motion } from "framer-motion";
+import { Navbar } from "components/Navbar";
+import { Hero } from "components/Hero";
 
 const Home: NextPage = () => {
-  return (
-    <div className="w-full h-full bg-black text-white font-inter">
-      <Head>
-        <title>flemingvincent.dev</title>
-        <link rel="icon" href="/fvlogo.svg" />
-      </Head>
+	return (
+		<div className="bg-black">
+			<Head>
+				<title>flemingvincent.dev</title>
+				<link rel="icon" href="/avatar.png" />
+				<meta
+					name="theme-color"
+					content="#eeeeee"
+					media="(prefers-color-scheme: light)"
+				/>
+				<meta
+					name="theme-color"
+					content="#111111"
+					media="(prefers-color-scheme: dark)"
+				/>
+			</Head>
 
-      <main className="min-h-full bg-black">
-        <Navbar />
-        <Hero />
-      </main>
-    </div>
-  );
+			<main>
+				<div id="hero-section" className="bg-[#eeeeee] dark:bg-[#111111]">
+					<Navbar />
+					<Hero />
+				</div>
+			</main>
+		</div>
+	);
 };
 
 export default Home;

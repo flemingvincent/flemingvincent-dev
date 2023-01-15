@@ -1,34 +1,19 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    "./pages/**/*.{js,ts,jsx,tsx}",
-    "./components/**/*.{js,ts,jsx,tsx}",
-    "./app/**/*.{js,ts,jsx,tsx}",
-  ],
-  theme: {
-    extend: {
-      fontFamily: {
-        inter: ["Inter", "sans-serif"],
-      },
-      screens: {
-        mobile: "1150px",
-      },
-      animation: {
-        text: "text 5s ease infinite",
-      },
-      keyframes: {
-        text: {
-          "0%, 100%": {
-            "background-size": "200% 200%",
-            "background-position": "left center",
-          },
-          "50%": {
-            "background-size": "200% 200%",
-            "background-position": "right center",
-          },
-        },
-      },
-    },
-  },
-  plugins: [],
+	content: [
+		"./pages/**/*.{js,ts,jsx,tsx}",
+		"./components/**/*.{js,ts,jsx,tsx}",
+		"./app/**/*.{js,ts,jsx,tsx}",
+	],
+	theme: {
+		extend: {
+			screens: {
+				mobile: "375px",
+				tablet: "768px",
+				laptop: "1280px",
+				desktop: "1920px",
+			},
+		},
+	},
+	plugins: [],
 };
