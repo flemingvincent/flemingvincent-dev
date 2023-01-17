@@ -5,6 +5,8 @@ import { motion } from "framer-motion";
 import Marquee from "react-fast-marquee";
 
 export const Hero = () => {
+	const marqueeText = "Developer. Designer. Student. ";
+
 	return (
 		<div className="flex flex-col items-center justify-center w-screen h-[calc(100vh-74px)] bg-[#eeeeee] dark:bg-[#111111] relative overflow-hidden">
 			<motion.div
@@ -33,20 +35,13 @@ export const Hero = () => {
 					}}
 				>
 					<Marquee gradient={false} className="text-base text-black font-bold">
-						Vincent Fleming © 2023 © Vincent Fleming © 2023 © Vincent Fleming ©
-						2023 © Vincent Fleming © 2023 © Vincent Fleming © 2023 © Vincent
-						Fleming © 2023 © Vincent Fleming © 2023 © Vincent Fleming © 2023 ©
-						Vincent Fleming © 2023 © Vincent Fleming © 2023 © Vincent Fleming ©
-						2023 © Vincent Fleming © 2023 © Vincent Fleming © 2023 © Vincent
-						Fleming © 2023 © Vincent Fleming © 2023 © Vincent Fleming © 2023 ©
-						Vincent Fleming © 2023 © Vincent Fleming © 2023 © Vincent Fleming ©
-						2023 © Vincent Fleming © 2023 ©{" "}
+						{marqueeText.repeat(48)}
 					</Marquee>
 				</motion.div>
 				<Image
 					src="/avatar.png"
-					width={120}
-					height={120}
+					width={128}
+					height={128}
 					alt="avatar"
 					className="hidden laptop:flex laptop:absolute"
 				/>

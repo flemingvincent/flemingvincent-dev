@@ -9,7 +9,7 @@ const Home: NextPage = () => {
 	return (
 		<div className="bg-black">
 			<Head>
-				<title>flemingvincent.dev</title>
+				<title>VINCENT© | 2023</title>
 				<link rel="icon" href="/avatar.png" />
 				<meta
 					name="theme-color"
