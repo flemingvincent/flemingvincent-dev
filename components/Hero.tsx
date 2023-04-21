@@ -10,7 +10,7 @@ export const Hero = () => {
 	return (
 		<div className="flex flex-col items-center justify-center w-screen h-[calc(100vh-74px)] bg-[#eeeeee] dark:bg-[#111111] relative overflow-hidden">
 			<motion.div
-				className="flex items-center justify-center mb-4"
+				className="flex items-center justify-center mb-0"
 				initial={{ y: 200, opacity: 0 }}
 				animate={{ y: 0, opacity: 1 }}
 				transition={{
@@ -21,7 +21,7 @@ export const Hero = () => {
 					stiffness: 100,
 				}}
 			>
-				<h1 className="text-[4rem] tablet:text-[9rem] laptop:text-[14rem] desktop:text-[22rem] text-black dark:text-white text-center font-black tracking-tighter">
+				<h1 className="text-[4rem] tablet:text-[9rem] laptop:text-[14rem] desktop:text-[22rem] text-black dark:text-white text-center font-black">
 					VINCENT©
 				</h1>
 				<motion.div
@@ -59,12 +59,6 @@ export const Hero = () => {
 				<h1 className="text-[28px] text-black dark:text-white text-center font-bold tracking-tighter tablet:max-w-[50vw] mb-4">
 					Developer. Designer. Student.
 				</h1>
-				<h2 className="text-base text-[#999999] text-center font-normal tablet:max-w-[50vw] px-4 mb-6">
-					I design <span className="font-mono">body</span> with{" "}
-					<span className="font-mono">style</span> from{" "}
-					<span className="font-mono">head</span>, pushing{" "}
-					<span className="font-mono">code</span> to billions of users.
-				</h2>
 				{/* Light */}
 				<div className="flex dark:hidden max-w-[375px]">
 					<Marquee
