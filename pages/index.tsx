@@ -11,6 +11,7 @@ const Home: NextPage = () => {
 			<Head>
 				<title>VINCENT© | 2023</title>
 				<link rel="icon" href="/avatar.png" />
+				<meta name="viewport" content="width=device-width, initial-scale=1" />
 				<meta
 					name="theme-color"
 					content="#eeeeee"
@@ -20,6 +21,10 @@ const Home: NextPage = () => {
 					name="theme-color"
 					content="#111111"
 					media="(prefers-color-scheme: dark)"
+				/>
+				<meta
+					name="apple-mobile-web-app-status-bar-style"
+					content="black-translucent"
 				/>
 			</Head>
 

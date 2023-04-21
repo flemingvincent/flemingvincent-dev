@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 
-import { FaLinkedinIn, FaGithub, FaEnvelope } from "react-icons/fa";
+import { FaLinkedinIn, FaGithub } from "react-icons/fa";
 import { motion } from "framer-motion";
 
 export const Navbar = () => {
