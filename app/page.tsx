@@ -4,6 +4,7 @@ import React from "react";
 
 import * as z from "zod";
 import { useForm } from "react-hook-form";
+import toast, { Toaster } from "react-hot-toast";
 
 import { zodResolver } from "@hookform/resolvers/zod";
 
@@ -38,9 +39,18 @@ export default function Page() {
 					email: data.email,
 				}),
 			});
-			console.log(data);
+			toast.success("Email sent!", {
+				className:
+					"bg-neutral-50 dark:bg-neutral-950 border-[2px] border-neutral-400/10 text-neutral-950 dark:text-neutral-50",
+			});
 			reset();
-		} catch (error) {}
+		} catch (error) {
+			console.error(error);
+			toast.success("Whoops! Something went wrong.", {
+				className:
+					"bg-neutral-50 dark:bg-neutral-950 border-[2px] border-neutral-400/10 text-neutral-950 dark:text-neutral-50",
+			});
+		}
 	};
 
 	return (
@@ -118,6 +128,7 @@ export default function Page() {
 					</p>
 				</div>
 			</div>
+			<Toaster />
 		</div>
 	);
 }
