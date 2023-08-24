@@ -42,10 +42,10 @@ const SFProText = localFont({
 });
 
 export const metadata: Metadata = {
-	title: "Mobile Designer and Developer",
+	title: "Vincent Fleming",
 	description:
-		"Actively working at the intersection of design and development. Want to work together?",
-	applicationName: "Mobile Designer and Developer",
+		"Actively working at the intersection of design and development.",
+	applicationName: "Vincent Fleming",
 	authors: {
 		name: "Vincent Fleming",
 		url: "https://github.com/FlemingVincent",
@@ -61,8 +61,8 @@ export const metadata: Metadata = {
 		"expo",
 	],
 	themeColor: [
-		{ media: "(prefers-color-scheme: dark)", color: "#0a0a0a" },
-		{ media: "(prefers-color-scheme: light)", color: "#fafafa" },
+		{ media: "(prefers-color-scheme: dark)", color: "#000000" },
+		{ media: "(prefers-color-scheme: light)", color: "#ffffff" },
 	],
 	creator: "Vincent Fleming",
 	publisher: "Vincent Fleming",
@@ -74,10 +74,10 @@ export const metadata: Metadata = {
 	openGraph: {
 		type: "website",
 		url: "https://flemingvincent.dev",
-		title: "Mobile Designer and Developer",
+		title: "Vincent Fleming",
 		description:
-			"Actively working at the intersection of design and development. Want to work together?",
-		siteName: "Mobile Designer and Developer",
+			"Actively working at the intersection of design and development.",
+		siteName: "Vincent Fleming",
 		images: [
 			{
 				url: "https://flemingvincent.dev/og.png",
@@ -91,9 +91,9 @@ export const metadata: Metadata = {
 		card: "summary_large_image",
 		site: "@veesentayy",
 		creator: "@veesentayy",
-		title: "Mobile Designer and Developer",
+		title: "Vincent Fleming",
 		description:
-			"Actively working at the intersection of design and development. Want to work together?",
+			"Actively working at the intersection of design and development.",
 		images: [
 			{
 				url: "https://flemingvincent.dev/og.png",
@@ -113,7 +113,7 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body
-				className={`${SFProDisplay.variable} ${SFProText.variable} bg-neutral-50 dark:bg-neutral-950`}
+				className={`${SFProDisplay.variable} ${SFProText.variable} bg-white dark:bg-black text-black dark:text-white`}
 			>
 				<ThemeProvider attribute="class" defaultTheme="system" enableSystem>
 					{children}

@@ -1,134 +1,189 @@
-"use client";
-
 import React from "react";
-
-import * as z from "zod";
-import { useForm } from "react-hook-form";
-import toast, { Toaster } from "react-hot-toast";
-
-import { zodResolver } from "@hookform/resolvers/zod";
-
-import { Button } from "@/components/button";
-import { Input } from "@/components/input";
+import Link from "next/link";
 
 export default function Page() {
-	const schema = z.object({
-		email: z
-			.string({
-				required_error: "Whoops! Looks like you forgot to type in an email.",
-			})
-			.email({
-				message: "Whoops! That doesn't look like a valid email.",
-			}),
-	});
-
-	const {
-		register,
-		handleSubmit,
-		reset,
-		formState: { errors },
-	} = useForm<z.infer<typeof schema>>({
-		resolver: zodResolver(schema),
-	});
-
-	const onSubmit = async (data: z.infer<typeof schema>) => {
-		try {
-			await fetch("/api/send", {
-				method: "POST",
-				body: JSON.stringify({
-					email: data.email,
-				}),
-			});
-			toast.success("Email sent!", {
-				className:
-					"bg-neutral-50 dark:bg-neutral-950 border-[2px] border-neutral-400/10 text-neutral-950 dark:text-neutral-50",
-			});
-			reset();
-		} catch (error) {
-			console.error(error);
-			toast.success("Whoops! Something went wrong.", {
-				className:
-					"bg-neutral-50 dark:bg-neutral-950 border-[2px] border-neutral-400/10 text-neutral-950 dark:text-neutral-50",
-			});
-		}
-	};
-
 	return (
-		<div className="max-w-[67rem] mx-auto px-6">
-			<div className="min-h-[75vh] flex flex-col justify-center py-6">
-				<h1 className="text-[2.75rem] text-center text-neutral-950 dark:text-neutral-50 font-semibold font-display leading-[48px] mb-4 sm:text-[4.25rem] sm:leading-[1.1]">
-					Mobile Designer
-					<br />
-					and Developer
-				</h1>
-				<p className="text-[1.0625rem] text-center text-neutral-800 dark:text-neutral-200 font-text mb-4 max-w-[26.25rem] mx-auto">
-					Actively working at the intersection of design and development. Want
-					to work together?
-				</p>
-				<form
-					className={`mx-auto border-[2px] w-full flex items-center justify-center rounded-full p-[2px] max-w-[26.875rem] transition-all duration-300 ease-out mb-4 ${
-						errors.email
-							? "border-[#ff3f3f]/80 dark:border-[#ff3f3f]/80"
-							: "border-neutral-400/10"
-					}`}
-					onSubmit={handleSubmit(onSubmit)}
-				>
-					<Input
-						autoComplete="off"
-						autoCapitalize="off"
-						placeholder="Email"
-						{...register("email")}
-					/>
-					<Button
-						className="h-10 px-10 bg-neutral-800 dark:bg-neutral-200 hover:bg-black dark:hover:bg-white"
-						disabled={!!errors.email}
-					>
-						Connect
-					</Button>
-				</form>
-				<div className="mx-auto w-fit h-10 flex justify-center items-center border-[2px] border-neutral-400/10 rounded-full px-5 gap-x-4">
-					<span className="relative flex h-2.5 w-2.5">
-						<span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#00ca48] opacity-75"></span>
-						<span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#00ca48]"></span>
-					</span>
-					<p className="text-[1.0625rem] text-center text-neutral-800 dark:text-neutral-200 font-text">
-						Available for work
-					</p>
+		<div className="bg-white dark:bg-black text-black dark:text-white overflow-x-hidden">
+			{/* Hero */}
+			<div className="p-8 border-b border-neutral-100 dark:border-neutral-800">
+				<h1 className="text-md font-medium font-display">Vincent Fleming</h1>
+				<h2 className="text-md opacity-70 mb-2 font-text">
+					Actively working at the intersection of design and development.
+				</h2>
+			</div>
+			{/* Info */}
+			<div className="border-b border-neutral-100 dark:border-neutral-800">
+				{/* Work */}
+				<div className="pb-8">
+					<div className="p-8">
+						<h3 className="text-md font-medium font-display">Work</h3>
+						<h4 className="text-md opacity-70 font-text">
+							Design, Engineering
+						</h4>
+					</div>
+					<div className="flex flex-row gap-6 px-8 overflow-x-scroll no-scrollbar">
+						<div className="flex flex-col gap-2 w-64 shrink-0">
+							<div className="aspect-square bg-neutral-50 dark:bg-neutral-900 border border-neutral-100 dark:border-neutral-800 rounded-xl flex-1 h-64 flex justify-center items-center">
+								<svg
+									width="143"
+									height="24"
+									viewBox="0 0 143 24"
+									xmlns="http://www.w3.org/2000/svg"
+									className="fill-black dark:fill-white"
+								>
+									<g clipPath="url(#clip0_324_4)">
+										<path d="M1.40876 12.545V23.4262H0V0.576843H16.5131V1.82625H1.40876V11.2988H15.7131V12.5482H1.40876V12.545Z" />
+										<path d="M20.9275 23.4231V0.576843H22.3363V22.1768H38.2725L37.9219 23.4262H20.9307L20.9275 23.4231Z" />
+										<path d="M45.7593 23.4231V13.5999L36.0637 0.576843H37.7912L46.4956 12.3219L55.2 0.576843H56.8637L47.1681 13.5362V23.4231H45.7593Z" />
+										<path d="M71.3913 0.576843H72.8V15.9043C72.8 18.5912 72.0638 20.6151 70.5913 21.9697C69.1188 23.3243 66.9323 24.0031 64.0319 24.0031C61.4502 24.0031 59.3849 23.3944 57.8391 22.18C56.2933 20.9657 55.3467 19.2254 55.0056 16.9657H56.4144C56.7331 18.843 57.5459 20.2772 58.8463 21.2685C60.1467 22.2597 61.8741 22.7569 64.0287 22.7569C68.9339 22.7569 71.3881 20.4334 71.3881 15.78V0.576843H71.3913Z" />
+										<path d="M79.0725 23.4231V0.576843H96.4494V1.82625H80.4813V10.9768H95.6494V12.2262H80.4813V22.1768H96.8319L96.4813 23.4262H79.0725V23.4231Z" />
+										<path d="M109.087 23.4231V1.82306H99.1362V0.576843H120.449V1.82625H110.499V23.4262H109.09L109.087 23.4231Z" />
+										<path d="M140.8 5.85495C140.182 4.19121 139.242 3.00555 137.986 2.30436C136.727 1.59997 134.936 1.24938 132.609 1.24938C130.005 1.24938 128.016 1.66691 126.642 2.49878C125.269 3.33065 124.577 4.53543 124.577 6.11631C124.577 7.46133 125.084 8.494 126.097 9.22069C127.111 9.94738 128.781 10.4573 131.104 10.7569L134.945 11.2701C137.632 11.6334 139.586 12.3219 140.8 13.3354C142.018 14.349 142.623 15.7609 142.623 17.5745C142.623 19.6653 141.814 21.2589 140.191 22.3585C138.569 23.4581 136.201 24.0063 133.087 24.0063C126.728 24.0063 123.21 21.8932 122.528 17.6701H123.968C124.354 19.3976 125.291 20.6789 126.783 21.5107C128.274 22.3426 130.378 22.7601 133.087 22.7601C135.796 22.7601 137.795 22.3235 139.152 21.447C140.507 20.5737 141.186 19.2828 141.186 17.5745C141.186 16.102 140.653 14.9705 139.586 14.1832C138.518 13.3928 136.781 12.8382 134.368 12.5195L130.913 12.0701C129.077 11.8342 127.589 11.4677 126.448 10.9673C125.307 10.4669 124.475 9.82627 123.952 9.04858C123.43 8.27089 123.168 7.32746 123.168 6.21511C123.168 4.25177 123.994 2.72826 125.648 1.63822C127.302 0.551367 129.619 0.00634766 132.609 0.00634766C135.296 0.00634766 137.383 0.443001 138.865 1.31949C140.348 2.19599 141.441 3.61432 142.145 5.57447L140.8 5.86133V5.85495Z" />
+									</g>
+									<defs>
+										<clipPath id="clip0_324_4">
+											<rect width="142.623" height="24" />
+										</clipPath>
+									</defs>
+								</svg>
+							</div>
+							<p className="text-sm text-black/40 dark:text-white/40 font-text">
+								FE,{" "}
+								<Link
+									className="transition-all duration-300 ease-out hover:text-black dark:hover:text-white"
+									href="https://flyjets.com/"
+									target="_blank"
+								>
+									FLYJETS
+								</Link>{" "}
+								<span className="opacity-70">(2022 - 2023)</span>
+							</p>
+						</div>
+						<div className="flex flex-col gap-2 w-64 shrink-0">
+							<div className="aspect-square bg-neutral-50 dark:bg-neutral-900 border border-neutral-100 dark:border-neutral-800 rounded-xl flex-1 h-64 flex justify-center items-center">
+								<svg
+									width="143"
+									height="24"
+									viewBox="0 0 143 24"
+									xmlns="http://www.w3.org/2000/svg"
+									className="fill-black dark:fill-white"
+								>
+									<g clip-path="url(#clip0_324_4)">
+										<path d="M1.40876 12.545V23.4262H0V0.576843H16.5131V1.82625H1.40876V11.2988H15.7131V12.5482H1.40876V12.545Z" />
+										<path d="M20.9275 23.4231V0.576843H22.3363V22.1768H38.2725L37.9219 23.4262H20.9307L20.9275 23.4231Z" />
+										<path d="M45.7593 23.4231V13.5999L36.0637 0.576843H37.7912L46.4956 12.3219L55.2 0.576843H56.8637L47.1681 13.5362V23.4231H45.7593Z" />
+										<path d="M71.3913 0.576843H72.8V15.9043C72.8 18.5912 72.0638 20.6151 70.5913 21.9697C69.1188 23.3243 66.9323 24.0031 64.0319 24.0031C61.4502 24.0031 59.3849 23.3944 57.8391 22.18C56.2933 20.9657 55.3467 19.2254 55.0056 16.9657H56.4144C56.7331 18.843 57.5459 20.2772 58.8463 21.2685C60.1467 22.2597 61.8741 22.7569 64.0287 22.7569C68.9339 22.7569 71.3881 20.4334 71.3881 15.78V0.576843H71.3913Z" />
+										<path d="M79.0725 23.4231V0.576843H96.4494V1.82625H80.4813V10.9768H95.6494V12.2262H80.4813V22.1768H96.8319L96.4813 23.4262H79.0725V23.4231Z" />
+										<path d="M109.087 23.4231V1.82306H99.1362V0.576843H120.449V1.82625H110.499V23.4262H109.09L109.087 23.4231Z" />
+										<path d="M140.8 5.85495C140.182 4.19121 139.242 3.00555 137.986 2.30436C136.727 1.59997 134.936 1.24938 132.609 1.24938C130.005 1.24938 128.016 1.66691 126.642 2.49878C125.269 3.33065 124.577 4.53543 124.577 6.11631C124.577 7.46133 125.084 8.494 126.097 9.22069C127.111 9.94738 128.781 10.4573 131.104 10.7569L134.945 11.2701C137.632 11.6334 139.586 12.3219 140.8 13.3354C142.018 14.349 142.623 15.7609 142.623 17.5745C142.623 19.6653 141.814 21.2589 140.191 22.3585C138.569 23.4581 136.201 24.0063 133.087 24.0063C126.728 24.0063 123.21 21.8932 122.528 17.6701H123.968C124.354 19.3976 125.291 20.6789 126.783 21.5107C128.274 22.3426 130.378 22.7601 133.087 22.7601C135.796 22.7601 137.795 22.3235 139.152 21.447C140.507 20.5737 141.186 19.2828 141.186 17.5745C141.186 16.102 140.653 14.9705 139.586 14.1832C138.518 13.3928 136.781 12.8382 134.368 12.5195L130.913 12.0701C129.077 11.8342 127.589 11.4677 126.448 10.9673C125.307 10.4669 124.475 9.82627 123.952 9.04858C123.43 8.27089 123.168 7.32746 123.168 6.21511C123.168 4.25177 123.994 2.72826 125.648 1.63822C127.302 0.551367 129.619 0.00634766 132.609 0.00634766C135.296 0.00634766 137.383 0.443001 138.865 1.31949C140.348 2.19599 141.441 3.61432 142.145 5.57447L140.8 5.86133V5.85495Z" />
+									</g>
+									<defs>
+										<clipPath id="clip0_324_4">
+											<rect width="142.623" height="24" />
+										</clipPath>
+									</defs>
+								</svg>
+							</div>
+							<p className="text-sm text-black/40 dark:text-white/40 font-text">
+								FE Intern,{" "}
+								<Link
+									className="transition-all duration-300 ease-out hover:text-black dark:hover:text-white"
+									href="https://apps.apple.com/us/app/flyjets/id1631026300/"
+									target="_blank"
+								>
+									FLYJETS
+								</Link>{" "}
+								<span className="opacity-70">(2022)</span>
+							</p>
+						</div>
+					</div>
+				</div>
+				{/* Companies */}
+				<div className="pb-8">
+					<div className="p-8">
+						<h3 className="text-md font-medium font-display">Ventures</h3>
+						<h4 className="text-md opacity-70 font-text">
+							Product, Brand, Design, Engineering
+						</h4>
+					</div>
+					<div className="flex flex-row gap-6 px-8 overflow-x-scroll no-scrollbar">
+						<div className="flex flex-col gap-2 w-64 shrink-0">
+							<div className="aspect-square bg-neutral-50 dark:bg-neutral-900 border border-neutral-100 dark:border-neutral-800 rounded-xl flex-1 h-64 flex justify-center items-center">
+								<svg
+									width="149"
+									height="24"
+									viewBox="0 0 149 24"
+									xmlns="http://www.w3.org/2000/svg"
+									className="fill-black dark:fill-white"
+								>
+									<path d="M35.8433 20.8147V4.59846H42.1676C45.2256 4.59846 47.3105 6.49807 47.3105 9.37066C47.3105 11.2008 46.2912 12.7992 44.6464 13.61L48.9553 20.8147H45.2951L41.519 14.166H38.9939V20.8147H35.8433ZM38.9939 11.4788H41.6348C43.187 11.4788 44.1599 10.6216 44.1599 9.37066C44.1599 8.11969 43.187 7.28571 41.6348 7.28571H38.9939V11.4788Z" />
+									<path d="M55.5464 21C51.5618 21 49.0367 18.2664 49.0367 14.3977C49.0367 10.529 51.7472 7.79537 55.4537 7.79537C59.6004 7.79537 62.1487 10.9691 61.5927 15.0232H52.0715C52.3031 17.2239 53.6699 18.4286 55.5464 18.4286C57.0985 18.4286 58.1178 17.7336 58.3958 16.6216H61.5464C61.0599 19.1004 58.8823 21 55.5464 21ZM52.2105 12.7761H58.3958C58.3495 11.2008 57.1912 10.1815 55.4537 10.1815C53.7626 10.1815 52.6275 11.0618 52.2105 12.7761Z" />
+									<path d="M64.6879 7.30888C64.6879 4.59846 66.379 3 68.7651 3C69.5296 3 70.2709 3.139 70.5953 3.25483V5.87259C70.2478 5.71043 69.8076 5.64093 69.4138 5.64093C68.4176 5.64093 67.769 6.28958 67.769 7.49421V7.9807H70.5489V10.4826H67.769V20.8147H64.6879V10.4826H62.6725V7.9807H64.6879V7.30888Z" />
+									<path d="M72.1054 20.8147V7.9807H75.1865V9.78765C75.8351 8.60618 77.3409 7.79537 78.8467 7.79537C79.4258 7.79537 79.9587 7.88803 80.3757 8.05019V10.9923C79.8892 10.7838 79.3332 10.668 78.6845 10.668C76.7849 10.668 75.1865 12.3127 75.1865 16.0888V20.8147H72.1054Z" />
+									<path d="M87.377 21C83.3925 21 80.8674 18.2664 80.8674 14.3977C80.8674 10.529 83.5778 7.79537 87.2844 7.79537C91.4311 7.79537 93.9794 10.9691 93.4234 15.0232H83.9021C84.1338 17.2239 85.5006 18.4286 87.377 18.4286C88.9292 18.4286 89.9485 17.7336 90.2265 16.6216H93.377C92.8906 19.1004 90.713 21 87.377 21ZM84.0411 12.7761H90.2265C90.1801 11.2008 89.0218 10.1815 87.2844 10.1815C85.5933 10.1815 84.4581 11.0618 84.0411 12.7761Z" />
+									<path d="M100.243 21C97.116 21 95.0079 19.2625 94.8689 16.5985H97.8342C97.9268 17.8031 98.8535 18.5212 100.243 18.5212C101.448 18.5212 102.213 17.9421 102.213 17.0386C102.213 14.5598 95.2164 16.2046 95.2164 11.4788C95.2164 9.39382 97.0002 7.79537 99.7801 7.79537C102.815 7.79537 104.761 9.32432 104.969 11.8031H102.004C101.865 10.7606 101.054 10.1351 99.8033 10.1351C98.8071 10.1351 98.1121 10.5985 98.1121 11.3398C98.1121 13.6795 105.178 11.8263 105.178 16.9691C105.178 19.4015 103.162 21 100.243 21Z" />
+									<path d="M107.284 20.8147V4.41313H110.365V9.71815C111.083 8.67568 112.682 7.79537 114.489 7.79537C117.269 7.79537 119.307 9.62548 119.307 12.3822V20.8147H116.226V13.1699C116.226 11.5714 115.253 10.5058 113.701 10.5058C111.732 10.5058 110.365 12.0579 110.365 15.0695V20.8147H107.284Z" />
+									<path d="M127.782 21C123.797 21 121.272 18.2664 121.272 14.3977C121.272 10.529 123.983 7.79537 127.689 7.79537C131.836 7.79537 134.384 10.9691 133.828 15.0232H124.307C124.539 17.2239 125.905 18.4286 127.782 18.4286C129.334 18.4286 130.353 17.7336 130.631 16.6216H133.782C133.295 19.1004 131.118 21 127.782 21ZM124.446 12.7761H130.631C130.585 11.2008 129.427 10.1815 127.689 10.1815C125.998 10.1815 124.863 11.0618 124.446 12.7761Z" />
+									<path d="M141.575 21C137.915 21 135.39 18.4286 135.39 14.3977C135.39 10.3668 137.915 7.79537 141.552 7.79537C143.266 7.79537 144.818 8.51351 145.606 9.62548V4.41313H148.687V20.8147H145.606V19.1699C144.818 20.2819 143.289 21 141.575 21ZM138.494 14.3977C138.494 16.7606 139.953 18.3591 142.061 18.3591C144.146 18.3591 145.606 16.7606 145.606 14.3977C145.606 12.0347 144.146 10.4131 142.061 10.4131C139.953 10.4131 138.494 12.0347 138.494 14.3977Z" />
+									<path d="M9.79573 0L13.8366 8.39098C14.475 7.85424 15.0935 7.03488 15.647 5.88563L17.5009 2.03578L20.0109 3.2445L15.97 11.6355C16.7877 11.7999 17.8139 11.7726 19.0575 11.4888L23.2234 10.538L23.8433 13.254L14.7635 15.3264C15.1448 16.0681 15.806 16.8535 16.8032 17.6488L20.144 20.3129L18.4071 22.491L11.1256 16.6843C10.7834 17.4448 10.5817 18.4514 10.5817 19.727V24H7.7958V14.6868C6.98777 14.8933 6.075 15.3632 5.07775 16.1585L1.73694 18.8227L0 16.6446L7.28144 10.8379C6.61611 10.3349 5.67964 9.91428 4.43608 9.63044L0.27018 8.67961L0.890071 5.96362L9.96981 8.03599C9.94819 7.20225 9.69319 6.20783 9.13978 5.0586L7.28575 1.20873L9.79573 0Z" />
+								</svg>
+							</div>
+							<p className="text-sm text-black/40 dark:text-white/40 font-text">
+								Founder, Refreshed{" "}
+								<span className="opacity-70">(2023 - Present)</span>
+							</p>
+						</div>
+						<div className="flex flex-col gap-2 w-64 shrink-0">
+							<div className="aspect-square bg-neutral-50 dark:bg-neutral-900 border border-neutral-100 dark:border-neutral-800 rounded-xl flex-1 h-64 flex justify-center items-center">
+								<svg
+									width="88"
+									height="24"
+									viewBox="0 0 88 24"
+									xmlns="http://www.w3.org/2000/svg"
+									className="fill-black dark:fill-white"
+								>
+									<path d="M6.98674 23.5714H0L4.85278 0.761716H20.8654L19.7273 6.0729H10.7014L9.76879 10.4673H17.9253L16.8346 15.4939H8.69391L6.98674 23.5714Z" />
+									<path d="M30.0419 23.5944H23.3397L27.0543 6.09591H20.7157L21.8538 0.784729H41.2333L40.0952 6.09591H33.7565L30.0419 23.5944Z" />
+									<path d="M43.7751 23.5944H37.3732L42.226 0.784729H47.2843L53.4965 13.3039H53.6229L56.2627 0.784729H62.6646L57.8118 23.5944H52.7535L46.5413 11.0751H46.4149L43.7751 23.5944Z" />
+									<path d="M60.4263 16.4868H66.7649C66.8282 16.8978 67.0231 17.2666 67.3498 17.5933C67.6765 17.92 68.098 18.1782 68.6144 18.3678C69.1413 18.547 69.7156 18.6366 70.3374 18.6366C70.9907 18.6366 71.5492 18.5575 72.0129 18.3995C72.4871 18.2308 72.8507 18.0043 73.1036 17.7197C73.367 17.4352 73.4988 17.1033 73.4988 16.7239C73.4988 16.3024 73.3354 15.9494 73.0088 15.6648C72.6926 15.3698 71.9971 15.0589 70.9222 14.7322L68.5353 14.0051C66.628 13.4255 65.179 12.6193 64.1884 11.5866C63.1978 10.5433 62.7025 9.24188 62.7025 7.68225C62.7025 6.13315 63.1135 4.78428 63.9355 3.63563C64.7574 2.47644 65.885 1.58071 67.3182 0.948426C68.7619 0.316142 70.4059 0 72.25 0C74.2101 0 75.8962 0.289797 77.3083 0.86939C78.7309 1.43845 79.8216 2.26041 80.5804 3.3353C81.3496 4.41018 81.7395 5.70109 81.7501 7.20803H75.6327C75.6222 6.7549 75.4799 6.35972 75.2059 6.0225C74.932 5.68528 74.5526 5.42183 74.0678 5.23215C73.5936 5.04246 73.0404 4.94762 72.4081 4.94762C71.8285 4.94762 71.3174 5.03192 70.8748 5.20053C70.4427 5.3586 70.1055 5.5799 69.8631 5.86443C69.6313 6.13842 69.5154 6.45456 69.5154 6.81286C69.5154 7.26599 69.6945 7.66117 70.0528 7.99839C70.4217 8.32507 71.0645 8.6254 71.9813 8.89939L74.4788 9.62652C76.5232 10.2167 78.0091 10.9859 78.9364 11.9344C79.8743 12.8722 80.3433 14.1632 80.3433 15.8071C80.3433 17.4089 79.9165 18.7946 79.0629 19.9644C78.2093 21.1235 77.0238 22.0193 75.5063 22.6516C73.9888 23.2838 72.2237 23.6 70.2109 23.6C68.1665 23.6 66.4119 23.3207 64.9471 22.7622C63.4929 22.2037 62.3758 21.3923 61.596 20.3279C60.8267 19.2636 60.4368 17.9832 60.4263 16.4868Z" />
+									<path d="M84.5425 24C83.6362 24 82.8617 23.6786 82.2188 23.0358C81.576 22.3929 81.2546 21.6184 81.2546 20.7121C81.2546 19.8059 81.576 19.0313 82.2188 18.3885C82.8617 17.7457 83.6362 17.4243 84.5425 17.4243C85.4487 17.4243 86.2233 17.7457 86.8661 18.3885C87.5089 19.0313 87.8304 19.8059 87.8304 20.7121C87.8304 21.6184 87.5089 22.3929 86.8661 23.0358C86.2233 23.6786 85.4487 24 84.5425 24Z" />
+								</svg>
+							</div>
+							<p className="text-sm text-black/40 dark:text-white/40 font-text">
+								Founder, FTNS{" "}
+								<span className="opacity-70">(2022 - Present)</span>
+							</p>
+						</div>
+					</div>
+				</div>
+				{/* Projects */}
+				<div className="pb-8">
+					<div className="p-8">
+						<h3 className="text-md font-medium font-display">Projects</h3>
+						<h4 className="text-md opacity-70 font-text">
+							Design, Engineering
+						</h4>
+					</div>
+					<div className="flex flex-row gap-6 px-8 overflow-x-scroll no-scrollbar">
+						<div className="flex flex-col gap-2 w-64 shrink-0">
+							<div className="aspect-square bg-neutral-50 dark:bg-neutral-900 border border-neutral-100 dark:border-neutral-800 rounded-xl flex-1 h-64 flex justify-center items-center">
+								<p className="text-sm font-text">Coming Soon</p>
+							</div>
+							<p className="text-sm text-black/40 dark:text-white/40 font-text">
+								Circles <span className="opacity-70">(2023)</span>
+							</p>
+						</div>
+						<div className="flex flex-col gap-2 w-64 shrink-0">
+							<div className="aspect-square bg-neutral-50 dark:bg-neutral-900 border border-neutral-100 dark:border-neutral-800 rounded-xl flex-1 h-64 flex justify-center items-center">
+								<p className="text-sm font-text">Coming Soon</p>
+							</div>
+							<p className="text-sm text-black/40 dark:text-white/40 font-text">
+								MyTodos <span className="opacity-70">(2023)</span>
+							</p>
+						</div>
+					</div>
 				</div>
 			</div>
-			<div className="grid auto-rows-[16.5rem] grid-cols-1 md:grid-cols-3 gap-4 py-6">
-				<div className="flex items-center justify-center rounded-xl border-[2px] border-neutral-400/10 bg-neutral-200 p-4 dark:bg-neutral-800 row-span-2 col-span-1 md:col-span-2">
-					<p className="text-sm font-text text-neutral-800 dark:text-neutral-200">
-						Coming Soon!
-					</p>
-				</div>
-				<div className="flex items-center justify-center rounded-xl border-[2px] border-neutral-400/10 bg-neutral-200 p-4 dark:bg-neutral-800 row-span-1 col-span-1">
-					<p className="text-sm font-text text-neutral-800 dark:text-neutral-200">
-						Coming Soon!
-					</p>
-				</div>
-				<div className="flex items-center justify-center rounded-xl border-[2px] border-neutral-400/10 bg-neutral-200 p-4 dark:bg-neutral-800 row-span-1 col-span-1">
-					<p className="text-sm font-text text-neutral-800 dark:text-neutral-200">
-						Coming Soon!
-					</p>
-				</div>
-				<div className="flex items-center justify-center rounded-xl border-[2px] border-neutral-400/10 bg-neutral-200 p-4 dark:bg-neutral-800 row-span-1 col-span-1">
-					<p className="text-sm font-text text-neutral-800 dark:text-neutral-200">
-						Coming Soon!
-					</p>
-				</div>
-				<div className="flex items-center justify-center rounded-xl border-[2px] border-neutral-400/10 bg-neutral-200 p-4 dark:bg-neutral-800 row-span-2 col-span-1 md:col-span-2">
-					<p className="text-sm font-text text-neutral-800 dark:text-neutral-200">
-						Coming Soon!
-					</p>
-				</div>
-				<div className="flex items-center justify-center rounded-xl border-[2px] border-neutral-400/10 bg-neutral-200 p-4 dark:bg-neutral-800 row-span-1 col-span-1">
-					<p className="text-sm font-text text-neutral-800 dark:text-neutral-200">
-						Coming Soon!
-					</p>
-				</div>
-			</div>
-			<Toaster />
 		</div>
 	);
 }
