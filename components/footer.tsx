@@ -1,35 +1,48 @@
-import { Github, Linkedin, Twitter } from "lucide-react";
 import Link from "next/link";
 import * as React from "react";
 
 const Footer = () => {
 	return (
-		<footer className="max-w-[67rem] border-t border-t-neutral-400/10 mx-auto p-6">
+		<footer className="max-w-[67rem] mx-auto p-6">
 			<div className="flex flex-row justify-center gap-x-6 mb-4">
 				<Link
-					className="text-neutral-500 transition-all duration-300 ease-out hover:text-neutral-800 dark:hover:text-neutral-200"
-					href="https://www.linkedin.com/in/vincentfleming"
+					className="text-black/40 dark:text-white/40 transition-all duration-300 ease-out hover:text-black dark:hover:text-white"
+					href="/fleming-vincent-resume.pdf"
+					target="_blank"
 				>
-					<Linkedin strokeWidth={1} />
+					<p className="text-center text-sm font-text">Resume</p>
 				</Link>
 				<Link
-					className="text-neutral-500 transition-all duration-300 ease-out hover:text-neutral-800 dark:hover:text-neutral-200"
+					className="text-black/40 dark:text-white/40 transition-all duration-300 ease-out hover:text-black dark:hover:text-white"
 					href="https://github.com/FlemingVincent"
+					target="_blank"
 				>
-					<Github strokeWidth={1} />
+					<p className="text-center text-sm font-text">Github</p>
 				</Link>
 				<Link
-					className="text-neutral-500 transition-all duration-300 ease-out hover:text-neutral-800 dark:hover:text-neutral-200"
-					href="https://x.com/veesentayy"
+					className="text-black/40 dark:text-white/40 transition-all duration-300 ease-out hover:text-black dark:hover:text-white"
+					href="https://www.linkedin.com/in/vincentfleming"
+					target="_blank"
 				>
-					<Twitter strokeWidth={1} />
+					<p className="text-center text-sm font-text">LinkedIn</p>
+				</Link>
+				<Link
+					className="text-black/40 dark:text-white/40 transition-all duration-300 ease-out hover:text-black dark:hover:text-white"
+					href="https://x.com/veesentayy"
+					target="_blank"
+				>
+					<p className="text-center text-sm font-text">Twitter</p>
 				</Link>
 			</div>
-			<p className="text-center text-sm text-neutral-500">
+			<p className="text-center text-sm text-black/40 dark:text-white/40 font-text">
 				© 2023{" "}
-				<span className="transition-all duration-300 ease-out hover:text-neutral-800 dark:hover:text-neutral-200">
+				<Link
+					className="transition-all duration-300 ease-out hover:text-black dark:hover:text-white"
+					href="mailto:contact@flemingvincent.dev"
+					target="_blank"
+				>
 					Vincent Fleming
-				</span>
+				</Link>
 			</p>
 		</footer>
 	);
