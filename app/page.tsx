@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Page() {
 	return (
@@ -68,7 +69,7 @@ export default function Page() {
 									xmlns="http://www.w3.org/2000/svg"
 									className="fill-black dark:fill-white"
 								>
-									<g clip-path="url(#clip0_324_4)">
+									<g clipPath="url(#clip0_324_4)">
 										<path d="M1.40876 12.545V23.4262H0V0.576843H16.5131V1.82625H1.40876V11.2988H15.7131V12.5482H1.40876V12.545Z" />
 										<path d="M20.9275 23.4231V0.576843H22.3363V22.1768H38.2725L37.9219 23.4262H20.9307L20.9275 23.4231Z" />
 										<path d="M45.7593 23.4231V13.5999L36.0637 0.576843H37.7912L46.4956 12.3219L55.2 0.576843H56.8637L47.1681 13.5362V23.4231H45.7593Z" />
@@ -175,10 +176,24 @@ export default function Page() {
 						</div>
 						<div className="flex flex-col gap-2 w-64 shrink-0">
 							<div className="aspect-square bg-neutral-50 dark:bg-neutral-900 border border-neutral-100 dark:border-neutral-800 rounded-xl flex-1 h-64 flex justify-center items-center">
-								<p className="text-sm font-text">Coming Soon</p>
+								<Image
+									className="rounded-[0.5rem]"
+									alt="mytodos"
+									src="/mytodos.png"
+									width={64}
+									height={64}
+									quality={100}
+								/>
 							</div>
 							<p className="text-sm text-black/40 dark:text-white/40 font-text">
-								MyTodos <span className="opacity-70">(2023)</span>
+								<Link
+									className="transition-all duration-300 ease-out hover:text-black dark:hover:text-white"
+									href="https://github.com/FlemingVincent/mytodos"
+									target="_blank"
+								>
+									MyTodos
+								</Link>{" "}
+								<span className="opacity-70">(2023)</span>
 							</p>
 						</div>
 					</div>
