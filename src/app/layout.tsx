@@ -48,8 +48,9 @@ export default function RootLayout({
 }) {
 	return (
 		<html
-			className="text-black bg-white dark:text-white dark:bg-black"
+			className="text-black dark:text-white bg-[#EEEEEE] dark:bg-[#111111]"
 			lang="en"
+			suppressHydrationWarning
 		>
 			<body className="antialiased">
 				{children}
