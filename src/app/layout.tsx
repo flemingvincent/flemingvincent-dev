@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export const metadata: Metadata = {
 	applicationName: "Vincent Fleming",
@@ -55,6 +56,7 @@ export default function RootLayout({
 			<body className="antialiased">
 				{children}
 				<Analytics />
+				<SpeedInsights />
 			</body>
 		</html>
 	);
