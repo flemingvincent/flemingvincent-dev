@@ -12,12 +12,12 @@ export default function Index() {
 						Florida.
 					</Message>
 					<Message>
-						I will be graduting in December from the University of Florida with
-						a B.S. in Computer Science and a minor in Engineering Innovation.
+						I recently graduated from the University of Florida with a B.S. in
+						Computer Science and a minor in Engineering Innovation.
 					</Message>
 					<Message>
-						Currently, I&apos;m looking for full-time opportunities in software
-						engineering!
+						Currently, I&apos;m pursuing full-time software engineering
+						opportunities!
 					</Message>
 				</Thread>
 				<Thread>
@@ -78,8 +78,8 @@ export default function Index() {
 				</Thread>
 				<Thread>
 					<Message>
-						In my free time I enjoy running, working out, and playing sports
-						like soccer and pickleball.
+						In my free time I enjoy going on walks, running, working out, and
+						playing pickleball.
 					</Message>
 					<Message>
 						Also, I tend to work on a few side projects here and there, which
