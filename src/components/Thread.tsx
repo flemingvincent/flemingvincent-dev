@@ -14,6 +14,7 @@ export function Thread({ children }: ThreadProps) {
 				alt="avatar"
 				width={24}
 				height={24}
+				quality={100}
 			/>
 		</div>
 	);
