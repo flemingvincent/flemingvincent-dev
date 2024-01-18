@@ -15,7 +15,7 @@ export default function Index() {
 						I recently graduated from the University of Florida with a B.S. in
 						Computer Science and a minor in Engineering Innovation.
 					</Message>
-					<Message>
+					<Message isLast>
 						Currently, I&apos;m pursuing full-time software engineering
 						opportunities!
 					</Message>
@@ -37,7 +37,7 @@ export default function Index() {
 						</Link>
 						, which I regularly maintain and improve.
 					</Message>
-					<Message>
+					<Message isLast>
 						Most recently, I&apos;ve implemented a request quote feature which
 						integrates directly with Yardbook.
 					</Message>
@@ -71,7 +71,7 @@ export default function Index() {
 						</Link>
 						.
 					</Message>
-					<Message>
+					<Message isLast>
 						Additionally, I worked on a few different web projects, using React,
 						Vue, and jQuery, where I implemented bug fixes and new features.
 					</Message>
@@ -93,7 +93,7 @@ export default function Index() {
 						</Link>
 						.
 					</Message>
-					<Message>
+					<Message isLast>
 						If you&apos;d like to connect, feel free to reach out to me on{" "}
 						<Link
 							className="underline underline-offset-2"
