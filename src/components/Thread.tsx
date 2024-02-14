@@ -1,12 +1,12 @@
+import React from "react";
 import Image from "next/image";
 
-interface ThreadProps {
-	children: React.ReactNode;
-}
-
-export function Thread({ children }: ThreadProps) {
+const Thread = React.forwardRef<
+	HTMLDivElement,
+	React.HTMLProps<HTMLDivElement>
+>(({ children, ...props }, ref) => {
 	return (
-		<div className="flex flex-row items-end gap-x-4">
+		<div className="flex flex-row items-end gap-x-4" ref={ref} {...props}>
 			<div className="flex flex-1 flex-col gap-y-2">{children}</div>
 			<Image
 				className="rounded-full"
@@ -18,4 +18,6 @@ export function Thread({ children }: ThreadProps) {
 			/>
 		</div>
 	);
-}
+});
+
+export { Thread };

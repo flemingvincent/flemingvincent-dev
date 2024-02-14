@@ -8,7 +8,7 @@ export default function Index() {
 			<div className="mx-auto w-96 space-y-6">
 				<Thread>
 					<Message>
-						Hey, I&apos;m Vincent! A software engineer based in Jacksonville,
+						Hey, I&apos;m Vincent, a software engineer based in Jacksonville,
 						Florida.
 					</Message>
 					<Message>
