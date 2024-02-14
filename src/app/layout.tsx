@@ -49,7 +49,7 @@ export default function RootLayout({
 }) {
 	return (
 		<html
-			className="text-black dark:text-white bg-[#EEEEEE] dark:bg-[#111111]"
+			className="text-black dark:text-white bg-[#eeeeee] dark:bg-[#111111]"
 			lang="en"
 			suppressHydrationWarning
 		>

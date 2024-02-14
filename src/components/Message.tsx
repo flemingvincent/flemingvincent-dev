@@ -1,13 +1,19 @@
-import { Fragment } from "react";
+import React, { Fragment } from "react";
 
 interface MessageProps {
-	children: React.ReactNode;
 	isLast?: boolean;
 }
 
-export function Message({ children, isLast }: MessageProps) {
+const Message = React.forwardRef<
+	HTMLDivElement,
+	React.HTMLProps<HTMLDivElement> & MessageProps
+>(({ children, isLast, ...props }, ref) => {
 	return (
-		<div className="bg-neutral-200 dark:bg-neutral-800 rounded-2xl p-2 text-sm px-3 relative shadow-sm dark:shadow-none">
+		<div
+			className="bg-neutral-200 dark:bg-neutral-800 rounded-2xl p-2 text-sm px-3 relative shadow-sm dark:shadow-none"
+			ref={ref}
+			{...props}
+		>
 			{children}
 			{isLast && (
 				<Fragment>
@@ -17,4 +23,6 @@ export function Message({ children, isLast }: MessageProps) {
 			)}
 		</div>
 	);
-}
+});
+
+export { Message };
