@@ -76,10 +76,10 @@ export default function Index() {
 						Vue, and jQuery, where I implemented bug fixes and new features.
 					</Message>
 				</Thread>
-				<Thread>
+				<Thread isLast>
 					<Message>
-						In my free time I enjoy going on walks, running, working out, and
-						playing pickleball.
+						In my free time I enjoy going on running, working out, and playing
+						golf.
 					</Message>
 					<Message>
 						Also, I tend to work on a few side projects here and there, which
