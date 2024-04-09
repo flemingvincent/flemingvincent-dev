@@ -4,7 +4,7 @@ import { Thread, Message } from "@/components";
 
 export default function Index() {
 	return (
-		<main className="min-h-screen flex flex-1 items-center px-4 py-8">
+		<main className="min-h-screen flex flex-1 items-center px-5 py-12">
 			<div className="mx-auto w-96 space-y-6">
 				<Thread>
 					<Message>
@@ -26,14 +26,11 @@ export default function Index() {
 						Engineer for Crosswater.
 					</Message>
 					<Message>
-						At Crosswater, I&apos;ve had the opportunity to design and develop
-						the company&apos;s{" "}
-						<Link
-							className="underline underline-offset-2"
-							href="https://www.crosswaterturf.com/"
-							target="_blank"
-						>
-							website
+						At Crosswater, I&apos;ve had the opportunity to design and develop{" "}
+						<Link href="https://www.crosswaterturf.com/" target="_blank">
+							<span className="inline-flex animate-background-shine bg-[linear-gradient(110deg,#007AFF,45%,#32ADE6,55%,#007AFF)] dark:bg-[linear-gradient(110deg,#0A84FF,45%,#64D2FF,55%,#0A84FF)] bg-[length:250%_100%] bg-clip-text text-transparent font-medium">
+								Crosswater&apos;s website
+							</span>
 						</Link>
 						, which I regularly maintain and improve.
 					</Message>
@@ -48,28 +45,28 @@ export default function Index() {
 						a few different web and mobile projects.
 					</Message>
 					<Message>
-						With the help of one engineer, I was able to build and launch
-						FLYJETS&apos;{" "}
+						With the help of one engineer, I was able to build and launch{" "}
 						<Link
-							className="underline underline-offset-2"
 							href="https://apps.apple.com/us/app/flyjets/id1631026300"
 							target="_blank"
 						>
-							iOS app
+							<span className="inline-flex animate-background-shine bg-[linear-gradient(110deg,#007AFF,45%,#32ADE6,55%,#007AFF)] dark:bg-[linear-gradient(110deg,#0A84FF,45%,#64D2FF,55%,#0A84FF)] bg-[length:250%_100%] bg-clip-text text-transparent font-medium">
+								FLYJETS&apos; iOS
+							</span>
 						</Link>{" "}
 						from the ground up within two and a half months.
 					</Message>
 					<Message>
 						As a result, I had the opportunity to oversee a small team of
-						engineers in the development of FLYJETS&apos;{" "}
+						engineers in the development of{" "}
 						<Link
-							className="underline underline-offset-2"
 							href="https://play.google.com/store/apps/details?id=com.flyjets.flyjetsmobile"
 							target="_blank"
 						>
-							Android app
+							<span className="inline-flex animate-background-shine bg-[linear-gradient(110deg,#007AFF,45%,#32ADE6,55%,#007AFF)] dark:bg-[linear-gradient(110deg,#0A84FF,45%,#64D2FF,55%,#0A84FF)] bg-[length:250%_100%] bg-clip-text text-transparent font-medium">
+								FLYJETS&apos; Android.
+							</span>
 						</Link>
-						.
 					</Message>
 					<Message isLast>
 						Additionally, I worked on a few different web projects, using React,
@@ -84,25 +81,22 @@ export default function Index() {
 					<Message>
 						Also, I tend to work on a few side projects here and there, which
 						you can find on my{" "}
-						<Link
-							className="underline underline-offset-2"
-							href="https://github.com/FlemingVincent"
-							target="_blank"
-						>
-							GitHub
+						<Link href="https://github.com/FlemingVincent" target="_blank">
+							<span className="inline-flex animate-background-shine bg-[linear-gradient(110deg,#007AFF,45%,#32ADE6,55%,#007AFF)] dark:bg-[linear-gradient(110deg,#0A84FF,45%,#64D2FF,55%,#0A84FF)] bg-[length:250%_100%] bg-clip-text text-transparent font-medium">
+								GitHub.
+							</span>
 						</Link>
-						.
 					</Message>
 					<Message isLast>
 						If you&apos;d like to connect, feel free to reach out to me on{" "}
 						<Link
-							className="underline underline-offset-2"
 							href="https://www.linkedin.com/in/vincentfleming/"
 							target="_blank"
 						>
-							LinkedIn
+							<span className="inline-flex animate-background-shine bg-[linear-gradient(110deg,#007AFF,45%,#32ADE6,55%,#007AFF)] dark:bg-[linear-gradient(110deg,#0A84FF,45%,#64D2FF,55%,#0A84FF)] bg-[length:250%_100%] bg-clip-text text-transparent font-medium">
+								LinkedIn.
+							</span>
 						</Link>
-						.
 					</Message>
 				</Thread>
 			</div>
