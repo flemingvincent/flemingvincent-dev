@@ -75,7 +75,7 @@ export default function Index() {
 				</Thread>
 				<Thread isLast>
 					<Message>
-						In my free time I enjoy going on running, working out, and playing
+						In my free time I enjoy running, working out, and playing
 						golf.
 					</Message>
 					<Message>
