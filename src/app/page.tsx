@@ -28,7 +28,7 @@ export default function Index() {
 					<Message>
 						At Crosswater, I&apos;ve had the opportunity to design and develop{" "}
 						<Link href="https://www.crosswaterturf.com/" target="_blank">
-							<span className="inline-flex animate-background-shine bg-[linear-gradient(110deg,#007AFF,45%,#32ADE6,55%,#007AFF)] dark:bg-[linear-gradient(110deg,#0A84FF,45%,#64D2FF,55%,#0A84FF)] bg-[length:250%_100%] bg-clip-text text-transparent font-medium">
+							<span className="inline-flex hover:animate-background-shine bg-[linear-gradient(110deg,#007AFF,45%,#32ADE6,55%,#007AFF)] dark:bg-[linear-gradient(110deg,#0A84FF,45%,#64D2FF,55%,#0A84FF)] bg-[length:250%_100%] bg-clip-text text-transparent font-medium">
 								Crosswater&apos;s website
 							</span>
 						</Link>
@@ -50,7 +50,7 @@ export default function Index() {
 							href="https://apps.apple.com/us/app/flyjets/id1631026300"
 							target="_blank"
 						>
-							<span className="inline-flex animate-background-shine bg-[linear-gradient(110deg,#007AFF,45%,#32ADE6,55%,#007AFF)] dark:bg-[linear-gradient(110deg,#0A84FF,45%,#64D2FF,55%,#0A84FF)] bg-[length:250%_100%] bg-clip-text text-transparent font-medium">
+							<span className="inline-flex hover:animate-background-shine bg-[linear-gradient(110deg,#007AFF,45%,#32ADE6,55%,#007AFF)] dark:bg-[linear-gradient(110deg,#0A84FF,45%,#64D2FF,55%,#0A84FF)] bg-[length:250%_100%] bg-clip-text text-transparent font-medium">
 								FLYJETS&apos; iOS
 							</span>
 						</Link>{" "}
@@ -63,7 +63,7 @@ export default function Index() {
 							href="https://play.google.com/store/apps/details?id=com.flyjets.flyjetsmobile"
 							target="_blank"
 						>
-							<span className="inline-flex animate-background-shine bg-[linear-gradient(110deg,#007AFF,45%,#32ADE6,55%,#007AFF)] dark:bg-[linear-gradient(110deg,#0A84FF,45%,#64D2FF,55%,#0A84FF)] bg-[length:250%_100%] bg-clip-text text-transparent font-medium">
+							<span className="inline-flex hover:animate-background-shine bg-[linear-gradient(110deg,#007AFF,45%,#32ADE6,55%,#007AFF)] dark:bg-[linear-gradient(110deg,#0A84FF,45%,#64D2FF,55%,#0A84FF)] bg-[length:250%_100%] bg-clip-text text-transparent font-medium">
 								FLYJETS&apos; Android.
 							</span>
 						</Link>
@@ -75,14 +75,14 @@ export default function Index() {
 				</Thread>
 				<Thread isLast>
 					<Message>
-						In my free time I enjoy going on running, working out, and playing
+						In my free time I enjoy running, working out, and playing
 						golf.
 					</Message>
 					<Message>
 						Also, I tend to work on a few side projects here and there, which
 						you can find on my{" "}
 						<Link href="https://github.com/FlemingVincent" target="_blank">
-							<span className="inline-flex animate-background-shine bg-[linear-gradient(110deg,#007AFF,45%,#32ADE6,55%,#007AFF)] dark:bg-[linear-gradient(110deg,#0A84FF,45%,#64D2FF,55%,#0A84FF)] bg-[length:250%_100%] bg-clip-text text-transparent font-medium">
+							<span className="inline-flex hover:animate-background-shine bg-[linear-gradient(110deg,#007AFF,45%,#32ADE6,55%,#007AFF)] dark:bg-[linear-gradient(110deg,#0A84FF,45%,#64D2FF,55%,#0A84FF)] bg-[length:250%_100%] bg-clip-text text-transparent font-medium">
 								GitHub.
 							</span>
 						</Link>
@@ -93,7 +93,7 @@ export default function Index() {
 							href="https://www.linkedin.com/in/vincentfleming/"
 							target="_blank"
 						>
-							<span className="inline-flex animate-background-shine bg-[linear-gradient(110deg,#007AFF,45%,#32ADE6,55%,#007AFF)] dark:bg-[linear-gradient(110deg,#0A84FF,45%,#64D2FF,55%,#0A84FF)] bg-[length:250%_100%] bg-clip-text text-transparent font-medium">
+							<span className="inline-flex hover:animate-background-shine bg-[linear-gradient(110deg,#007AFF,45%,#32ADE6,55%,#007AFF)] dark:bg-[linear-gradient(110deg,#0A84FF,45%,#64D2FF,55%,#0A84FF)] bg-[length:250%_100%] bg-clip-text text-transparent font-medium">
 								LinkedIn.
 							</span>
 						</Link>
