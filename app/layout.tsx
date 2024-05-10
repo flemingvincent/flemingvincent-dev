@@ -1,7 +1,13 @@
+import "@/styles/globals.css";
+
 import type { Metadata } from "next";
-import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+
+import { cn } from "@/lib/utils";
+import { Header } from "@/components/header";
+import { ThemeProvider } from "@/components/theme-provider";
+// import { TailwindIndicator } from "@/components/tailwind-indicator";
 
 export const metadata: Metadata = {
 	applicationName: "Vincent Fleming",
@@ -42,21 +48,26 @@ export const metadata: Metadata = {
 	},
 };
 
-export default function RootLayout({
-	children,
-}: {
+interface RootLayoutProps {
 	children: React.ReactNode;
-}) {
+}
+
+export default function RootLayout({ children }: RootLayoutProps) {
 	return (
-		<html
-			className="text-black dark:text-white bg-[#eeeeee] dark:bg-[#111111]"
-			lang="en"
-			suppressHydrationWarning
-		>
-			<body className="antialiased">
-				{children}
-				<Analytics />
-				<SpeedInsights />
+		<html lang="en" suppressHydrationWarning>
+			<head />
+			<body
+				className={cn(
+					"min-h-screen antialiased max-w-xl px-4 pt-8 mx-auto bg-neutral-50 dark:bg-neutral-950 text-black dark:text-white",
+				)}
+			>
+				<ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+					<Header />
+					{children}
+					{/* <TailwindIndicator /> */}
+					<Analytics />
+					<SpeedInsights />
+				</ThemeProvider>
 			</body>
 		</html>
 	);
