@@ -13,7 +13,7 @@ function WorkItem({ title, description, href }: workItemProps) {
 		<div className="hover:bg-neutral-100 dark:hover:bg-neutral-900 p-3 rounded-md -ml-3">
 			<Link href={href} target="_blank">
 				<p className="text-neutral-700 dark:text-neutral-300">{title}</p>
-				<p className="text-neutral-500">{description}</p>
+				<p className="text-neutral-600 dark:text-neutral-400">{description}</p>
 			</Link>
 		</div>
 	);

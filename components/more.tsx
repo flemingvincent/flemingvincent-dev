@@ -6,7 +6,7 @@ export function More() {
 			<Link href="/">
 				<p className="font-semibold">More</p>
 			</Link>
-			<p className="text-neutral-500">
+			<p className="text-neutral-600 dark:text-neutral-400">
 				You can see more of my work on{" "}
 				<Link
 					className="underline underline-offset-2"
