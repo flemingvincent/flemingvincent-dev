@@ -7,7 +7,15 @@ export function Header() {
 				<p className="font-semibold">Vincent Fleming</p>
 			</Link>
 			<p className="text-neutral-700 dark:text-neutral-300">
-				Software Engineer
+				Technology Analyst at{" "}
+				<Link
+					className="underline underline-offset-2"
+					href="https://www.dnb.com/"
+					target="_blank"
+				>
+					Dun & Bradstreet
+				</Link>
+				.
 			</p>
 		</header>
 	);
