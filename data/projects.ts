@@ -15,6 +15,6 @@ export const projects: Project[] = [
 		title: "Circles",
 		description:
 			"A location-sharing application that allows users to create, join, and share their location with small groups.",
-		href: "https://github.com/FlemingVincent/expo-supabase-starter",
+		href: "https://github.com/flemingvincent/circles",
 	},
 ];
