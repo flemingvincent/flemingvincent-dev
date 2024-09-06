@@ -6,15 +6,23 @@ export interface projectItemProps {
 	title: string;
 	description: string;
 	href: string;
+	type: string;
 }
 
-function ProjectItem({ title, description, href }: projectItemProps) {
+function ProjectItem({ title, description, href, type }: projectItemProps) {
 	return (
-		<div className="hover:bg-neutral-100 dark:hover:bg-neutral-900 p-3 rounded-md -ml-3">
-			<Link href={href} target="_blank">
-				<p className="text-neutral-700 dark:text-neutral-300">{title}</p>
-				<p className="text-neutral-600 dark:text-neutral-400">{description}</p>
-			</Link>
+		<div className="lowercase space-y-1">
+			<p>
+				<Link
+					className="underline underline-offset-4 text-[#0000FF] dark:text-[#4AF626] font-medium"
+					href={href}
+					target="_blank"
+				>
+					{title}
+				</Link>{" "}
+				- <span className="text-xs">{type}</span>
+			</p>
+			<p className="text-sm">{description}</p>
 		</div>
 	);
 }
@@ -22,7 +30,7 @@ function ProjectItem({ title, description, href }: projectItemProps) {
 export function Projects() {
 	return (
 		<div className="space-y-4">
-			<p className="font-semibold">Projects</p>
+			<p className="text-lg">projects</p>
 			{projects.map((project) => (
 				<ProjectItem key={project.title} {...project} />
 			))}

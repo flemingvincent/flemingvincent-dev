@@ -2,19 +2,21 @@ export type Project = {
 	title: string;
 	description: string;
 	href: string;
+	type: "open-source" | "personal" | "school";
 };
 
 export const projects: Project[] = [
 	{
 		title: "Expo Supabase Starter",
 		description:
-			"A comprehensive starter project for developing React Native applications with Expo and using Supabase as the backend.",
+			"starter project for React Native applications with Expo and Supabase",
 		href: "https://github.com/FlemingVincent/expo-supabase-starter",
+		type: "open-source",
 	},
 	{
 		title: "Circles",
-		description:
-			"A location-sharing application that allows users to create, join, and share their location with small groups.",
+		description: "location-sharing application for friend groups",
 		href: "https://github.com/flemingvincent/circles",
+		type: "school",
 	},
 ];

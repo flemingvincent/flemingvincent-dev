@@ -3,7 +3,7 @@ import "@/styles/globals.css";
 import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import { GeistSans } from "geist/font/sans";
+import { GeistMono } from "geist/font/mono";
 
 import { cn } from "@/lib/utils";
 import { Header } from "@/components/header";
@@ -59,8 +59,8 @@ export default function RootLayout({ children }: RootLayoutProps) {
 			<head />
 			<body
 				className={cn(
-					"min-h-screen antialiased max-w-xl px-4 py-8 mx-auto bg-neutral-50 dark:bg-neutral-950 text-black dark:text-white",
-					GeistSans.className,
+					"min-h-screen antialiased text-[0.9rem] max-w-xl py-8 bg-neutral-50 dark:bg-neutral-950 text-black dark:text-white",
+					GeistMono.className,
 				)}
 			>
 				<ThemeProvider attribute="class" defaultTheme="system" enableSystem>
