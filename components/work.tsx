@@ -14,7 +14,7 @@ function WorkItem({ title, description, href, type }: workItemProps) {
 		<div className="lowercase space-y-1">
 			<p>
 				<Link
-					className="underline underline-offset-4 text-[#0000FF] dark:text-[#4AF626] font-medium"
+					className="underline underline-offset-4 text-[#0000FF] font-medium"
 					href={href}
 					target="_blank"
 				>

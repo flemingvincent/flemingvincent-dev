@@ -5,9 +5,9 @@ export function About() {
 		<header className="pt-6 space-y-4">
 			<p className="text-lg">vincent fleming</p>
 			<p>
-				technology analyst at{" "}
+				technology analyst @{" "}
 				<Link
-					className="underline underline-offset-4 text-[#0000FF] dark:text-[#4AF626] font-medium"
+					className="underline underline-offset-4 text-[#0000FF] font-medium"
 					href="https://www.dnb.com/"
 					target="_blank"
 				>
