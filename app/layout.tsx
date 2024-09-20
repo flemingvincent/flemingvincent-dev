@@ -59,11 +59,11 @@ export default function RootLayout({ children }: RootLayoutProps) {
 			<head />
 			<body
 				className={cn(
-					"min-h-screen antialiased text-[0.9rem] max-w-xl py-8 bg-neutral-50 dark:bg-neutral-950 text-black dark:text-white",
+					"min-h-screen antialiased text-[0.9rem] max-w-xl py-8 bg-neutral-50 text-black",
 					GeistMono.className,
 				)}
 			>
-				<ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+				<ThemeProvider attribute="class" defaultTheme="light">
 					<Header />
 					{children}
 					{/* <TailwindIndicator /> */}
