@@ -1,15 +1,19 @@
-import { Hero } from "@/components/hero";
-import { Work } from "@/components/work";
 import { About } from "@/components/about";
-import { Projects } from "@/components/projects";
+import { WorkExperience } from "@/components/work-experience";
+import { Education } from "@/components/education";
+import { SideProjects } from "@/components/side-projects";
+import { Teams } from "@/components/teams";
+import { Contact } from "@/components/contact";
 
 export default function Home() {
-	return (
-		<div className="px-8 space-y-6">
-			<About />
-			<Hero />
-			<Work />
-			<Projects />
-		</div>
-	);
+  return (
+    <div className="flex flex-col w-full max-w-xl p-6 gap-4">
+      <About />
+      <WorkExperience />
+      <Education />
+      <SideProjects />
+      <Teams />
+      <Contact />
+    </div>
+  );
 }

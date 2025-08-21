@@ -1,19 +1,10 @@
-import Link from "next/link";
-
-export function About() {
-	return (
-		<header className="pt-6 space-y-4">
-			<p className="text-lg">vincent fleming</p>
-			<p>
-				technology analyst @{" "}
-				<Link
-					className="underline underline-offset-4 text-[#0000FF] font-medium"
-					href="https://www.dnb.com/"
-					target="_blank"
-				>
-					dun & bradstreet
-				</Link>
-			</p>
-		</header>
-	);
-}
+export const About = () => {
+  return (
+    <section className="flex flex-col gap-2">
+      <h3>About</h3>
+      <p className="min-w-36 text-zinc-400 dark:text-zinc-500">
+        Actively working at the intersection of design and development
+      </p>
+    </section>
+  );
+};
