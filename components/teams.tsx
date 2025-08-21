@@ -6,7 +6,7 @@ export const Teams = () => {
     <section className="flex flex-col gap-2">
       <h3>Teams</h3>
       <div className="flex flex-row">
-        <p className="min-w-36 text-zinc-400 dark:text-zinc-500">Current</p>
+        <p className="min-w-36 text-zinc-600 dark:text-zinc-300">Current</p>
         <Link
           className=""
           href="https://www.dnb.com/en-us/products/dnb-hoovers.html"
@@ -18,6 +18,7 @@ export const Teams = () => {
             width={40}
             height={40}
             alt="Dun & Bradstreet"
+            priority
           />
         </Link>
       </div>

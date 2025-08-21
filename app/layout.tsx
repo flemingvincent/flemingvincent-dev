@@ -65,7 +65,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
       <head />
       <body
         className={cn(
-          "min-h-screen flex flex-1 justify-center antialiased bg-zinc-100 dark:bg-zinc-900 text-zinc-900 dark:text-white selection:bg-[#0000ff] selection:text-white dark:selection:bg-[#00ff00] dark:selection:text-black text-sm",
+          "min-h-screen flex flex-1 justify-center antialiased bg-zinc-100 dark:bg-zinc-900 text-black dark:text-white selection:bg-[#0000ff] selection:text-white dark:selection:bg-[#00ff00] dark:selection:text-black text-sm",
           inter.className,
         )}
       >

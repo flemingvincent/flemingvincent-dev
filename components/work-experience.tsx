@@ -35,7 +35,7 @@ const WorkItem = ({
 }: Work) => {
   return (
     <div className="flex flex-row">
-      <p className="min-w-36 text-zinc-400 dark:text-zinc-500">{duration}</p>
+      <p className="min-w-36 text-zinc-600 dark:text-zinc-300">{duration}</p>
       <div className="flex flex-col gap-1">
         <Link
           className="hover:underline hover:underline-offset-2"
@@ -45,10 +45,10 @@ const WorkItem = ({
           {title} at {company}
         </Link>
         {location && (
-          <p className="text-zinc-400 dark:text-zinc-500">{location}</p>
+          <p className="text-zinc-600 dark:text-zinc-300">{location}</p>
         )}
         {product && (
-          <p className="text-zinc-400 dark:text-zinc-500">{product}</p>
+          <p className="text-zinc-600 dark:text-zinc-300">{product}</p>
         )}
       </div>
     </div>

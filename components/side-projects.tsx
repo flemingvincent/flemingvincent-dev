@@ -41,7 +41,7 @@ const ProjectItem = ({
 }: Project) => {
   return (
     <div className="flex flex-row">
-      <p className="min-w-36 text-zinc-400 dark:text-zinc-500">{duration}</p>
+      <p className="min-w-36 text-zinc-600 dark:text-zinc-300">{duration}</p>
       <div className="flex flex-col gap-1">
         {href ? (
           <Link
@@ -54,7 +54,7 @@ const ProjectItem = ({
         ) : (
           <p>{title}</p>
         )}
-        <p className="text-zinc-400 dark:text-zinc-500">{description}</p>
+        <p className="text-zinc-600 dark:text-zinc-300">{description}</p>
         {images && (
           <div className="flex flex-row w-full overflow-x-auto gap-1 no-scrollbar">
             {images.map((image, index) => (
@@ -66,6 +66,7 @@ const ProjectItem = ({
                 width={170}
                 height={96}
                 quality={100}
+                priority
               />
             ))}
           </div>

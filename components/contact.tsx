@@ -23,7 +23,7 @@ const Platforms: Platform[] = [
 const ContactItem = ({ title, href }: Platform) => {
   return (
     <div className="flex flex-row">
-      <p className="min-w-36 text-zinc-400 dark:text-zinc-500">{title}</p>
+      <p className="min-w-36 text-zinc-600 dark:text-zinc-300">{title}</p>
       <Link
         className="hover:underline hover:underline-offset-2"
         href={href}
