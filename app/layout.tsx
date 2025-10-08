@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Vincent Fleming",
     description: "Software Engineer at Dun & Bradstreet",
-    creator: "@fleming_vincent",
+    creator: "@flmngv",
     images: ["https://flemingvincent.dev/og-image.png"],
   },
 };
@@ -65,7 +65,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
       <head />
       <body
         className={cn(
-          "min-h-screen flex flex-1 justify-center antialiased bg-zinc-100 dark:bg-zinc-900 text-black dark:text-white selection:bg-[#0000ff] selection:text-white dark:selection:bg-[#00ff00] dark:selection:text-black text-sm",
+          "min-h-screen flex flex-1 justify-center antialiased bg-[#FDFDFC] text-black text-base selection:bg-[#E2E1DE]",
           inter.className,
         )}
       >
