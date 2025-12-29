@@ -10,7 +10,17 @@ const data: Project[] = [
   {
     title: "Expo Supabase Starter",
     href: "https://github.com/flemingvincent/expo-supabase-starter",
-    description: "An opinionated starter project for Expo and Supabase.",
+    description: "A simple starter project for Expo and Supabase applications.",
+  },
+  {
+    title: "Crosswater Turf and Irrigation",
+    href: "https://www.crosswaterturf.com/",
+    description: "A marketing website for a local landscaping company.",
+  },
+  {
+    title: "The Ranch Wholesale Plants and Nursery",
+    href: "https://www.theranchnursery.com/",
+    description: "A full Shopify storefront for a local nursery.",
   },
   {
     title: "Circles",

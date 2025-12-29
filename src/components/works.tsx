@@ -13,7 +13,7 @@ const data: Project[] = [
     company: "Dun & Bradstreet",
   },
   {
-    title: "Software Engineer",
+    title: "Junior Software Engineer",
     href: "https://apps.apple.com/us/app/flyjets/id1631026300",
     company: "Flyjets",
   },
