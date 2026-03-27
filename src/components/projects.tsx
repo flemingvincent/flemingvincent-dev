@@ -11,7 +11,7 @@ const data: Project[] = [
     title: "Expo Clerk Convex",
     href: "https://github.com/flemingvincent/expo-clerk-convex",
     description:
-      "A simple starter project for Expo, Clerk, and Convex application.",
+      "A simple starter project for Expo, Clerk, and Convex applications.",
   },
   {
     title: "Crosswater Turf and Irrigation",
