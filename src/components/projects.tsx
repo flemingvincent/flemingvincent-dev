@@ -8,9 +8,10 @@ export interface Project {
 
 const data: Project[] = [
   {
-    title: "Expo Supabase Starter",
-    href: "https://github.com/flemingvincent/expo-supabase-starter",
-    description: "A simple starter project for Expo and Supabase applications.",
+    title: "Expo Clerk Convex",
+    href: "https://github.com/flemingvincent/expo-clerk-convex",
+    description:
+      "A simple starter project for Expo, Clerk, and Convex application.",
   },
   {
     title: "Crosswater Turf and Irrigation",
