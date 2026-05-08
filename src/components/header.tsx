@@ -6,7 +6,7 @@ export const Header = () => {
       <Link className="font-medium" href="/">
         Vincent Fleming
       </Link>
-      <span className="font-medium text-[#63635E]">Software Engineer</span>
+      <span className="font-medium text-[#63635E]">Software Developer II</span>
     </header>
   );
 };

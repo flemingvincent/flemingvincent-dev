@@ -10,11 +10,12 @@ import { cn } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: "Vincent Fleming",
-  description: "Software Engineer at Dun & Bradstreet",
+  description: "Software Developer II at RF Smart",
   applicationName: "flemingvincent.dev",
   keywords: [
     "Vincent Fleming",
     "Software Engineer",
+    "Software Developer",
     "React",
     "Next.js",
     "React Native",
@@ -26,7 +27,7 @@ export const metadata: Metadata = {
   publisher: "Vincent Fleming",
   openGraph: {
     title: "Vincent Fleming",
-    description: "Software Engineer at Dun & Bradstreet",
+    description: "Software Developer II at RF Smart",
     url: "https://flemingvincent.dev",
     siteName: "flemingvincent.dev",
     images: [
@@ -44,7 +45,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Vincent Fleming",
-    description: "Software Engineer at Dun & Bradstreet",
+    description: "Software Developer II at RF Smart",
     creator: "@flmngv",
     images: ["https://flemingvincent.dev/og-image.png"],
   },

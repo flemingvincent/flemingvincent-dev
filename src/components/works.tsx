@@ -8,7 +8,12 @@ export interface Project {
 
 const data: Project[] = [
   {
-    title: "Software Engineer",
+    title: "Software Developer II",
+    href: "https://www.rfsmart.com/",
+    company: "RF Smart",
+  },
+  {
+    title: "Associate Software Engineer",
     href: "https://www.dnb.com/en-us/products/dnb-hoovers.html",
     company: "Dun & Bradstreet",
   },
