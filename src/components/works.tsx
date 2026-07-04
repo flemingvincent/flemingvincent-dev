@@ -10,7 +10,7 @@ const data: Project[] = [
   {
     title: "Software Developer II",
     href: "https://www.rfsmart.com/",
-    company: "RF Smart",
+    company: "RF-SMART",
   },
   {
     title: "Associate Software Engineer",
@@ -20,17 +20,13 @@ const data: Project[] = [
   {
     title: "Junior Software Engineer",
     href: "https://apps.apple.com/us/app/flyjets/id1631026300",
-    company: "Flyjets",
+    company: "FLYJETS",
   },
 ];
 
 const Work = ({ title, company, href }: Project) => {
   return (
-    <Link
-      href={href}
-      target="_blank"
-      className="p-3 rounded-md hover:bg-[#F5F4F4] -mx-3"
-    >
+    <Link href={href} target="_blank" className="p-3 rounded-md hover:bg-[#F5F4F4] -mx-3">
       <span>{title}</span>
       <p className="text-[#63635E]">{company}</p>
     </Link>

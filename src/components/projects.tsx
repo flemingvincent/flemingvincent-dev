@@ -10,8 +10,7 @@ const data: Project[] = [
   {
     title: "Expo Clerk Convex",
     href: "https://github.com/flemingvincent/expo-clerk-convex",
-    description:
-      "A simple starter project for Expo, Clerk, and Convex applications.",
+    description: "A simple starter project for Expo, Clerk, and Convex applications.",
   },
   {
     title: "Crosswater Turf and Irrigation",
@@ -37,11 +36,7 @@ const data: Project[] = [
 
 const ProjectItem = ({ title, description, href }: Project) => {
   return (
-    <Link
-      href={href}
-      target="_blank"
-      className="p-3 rounded-md hover:bg-[#F5F4F4] -mx-3"
-    >
+    <Link href={href} target="_blank" className="p-3 rounded-md hover:bg-[#F5F4F4] -mx-3">
       <span>{title}</span>
       <p className="text-[#63635E]">{description}</p>
     </Link>

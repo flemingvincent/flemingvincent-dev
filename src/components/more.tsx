@@ -22,11 +22,7 @@ export const More = () => {
           LinkedIn
         </Link>
         , or{" "}
-        <Link
-          className="underline underline-offset-2"
-          href="https://x.com/flmngv"
-          target="_blank"
-        >
+        <Link className="underline underline-offset-2" href="https://x.com/flmngv" target="_blank">
           Twitter
         </Link>
         .
