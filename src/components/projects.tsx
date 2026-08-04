@@ -47,8 +47,8 @@ export const Projects = () => {
   return (
     <section className="flex flex-col gap-4">
       <span className="font-medium">Projects</span>
-      {data.map((project, index) => (
-        <ProjectItem key={index} {...project} />
+      {data.map((project) => (
+        <ProjectItem key={project.href} {...project} />
       ))}
     </section>
   );
