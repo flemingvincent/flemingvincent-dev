@@ -1,6 +1,6 @@
 import "@/styles/globals.css";
 
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 
 import { Analytics } from "@vercel/analytics/react";
@@ -33,15 +33,15 @@ export const metadata: Metadata = {
     images: [
       {
         url: "https://flemingvincent.dev/og-image.png",
-        width: 800,
-        height: 600,
+        width: 2560,
+        height: 1440,
       },
     ],
   },
   icons: {
     icon: "/avatar.png",
+    apple: "/avatar.png",
   },
-  manifest: "",
   twitter: {
     card: "summary_large_image",
     title: "Vincent Fleming",
@@ -51,10 +51,18 @@ export const metadata: Metadata = {
   },
 };
 
+export const viewport: Viewport = {
+  colorScheme: "light",
+  themeColor: "#fdfdfc",
+};
+
 const inter = Inter({
   subsets: ["latin"],
   display: "swap",
 });
+
+// Play the intro once per session: flag <html> before first paint so nothing flashes.
+const introScript = `try{if(!sessionStorage.getItem("intro")){sessionStorage.setItem("intro","1");document.documentElement.dataset.intro=""}}catch(e){}`;
 
 interface RootLayoutProps {
   children: React.ReactNode;
@@ -62,11 +70,14 @@ interface RootLayoutProps {
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
+    // suppressHydrationWarning: the intro script below sets data-intro on <html> before hydration.
     <html lang="en" suppressHydrationWarning>
-      <head />
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: introScript }} />
+      </head>
       <body
         className={cn(
-          "min-h-screen flex flex-1 justify-center antialiased bg-[#FDFDFC] text-black text-base selection:bg-[#E2E1DE]",
+          "min-h-screen flex justify-center antialiased bg-background text-black text-base selection:bg-selection",
           inter.className,
         )}
       >

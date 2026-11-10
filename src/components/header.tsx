@@ -1,12 +1,8 @@
-import Link from "next/link";
-
 export const Header = () => {
   return (
-    <header className="flex flex-col">
-      <Link className="font-medium" href="/">
-        Vincent Fleming
-      </Link>
-      <span className="font-medium text-[#63635E]">Software Developer II</span>
+    <header className="enter flex flex-col">
+      <h1 className="font-semibold">Vincent Fleming</h1>
+      <p className="font-medium text-muted">Software Developer II</p>
     </header>
   );
 };

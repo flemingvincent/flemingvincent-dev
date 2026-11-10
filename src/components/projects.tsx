@@ -1,12 +1,6 @@
-import Link from "next/link";
+import { LinkList, LinkListItem } from "@/components/link-list";
 
-export interface Project {
-  title: string;
-  description: string;
-  href: string;
-}
-
-const data: Project[] = [
+const data = [
   {
     title: "Expo Clerk Convex",
     href: "https://github.com/flemingvincent/expo-clerk-convex",
@@ -34,22 +28,17 @@ const data: Project[] = [
   },
 ];
 
-const ProjectItem = ({ title, description, href }: Project) => {
-  return (
-    <Link href={href} target="_blank" className="p-3 rounded-md hover:bg-[#F5F4F4] -mx-3">
-      <span>{title}</span>
-      <p className="text-[#63635E]">{description}</p>
-    </Link>
-  );
-};
-
 export const Projects = () => {
   return (
-    <section className="flex flex-col gap-4">
-      <span className="font-medium">Projects</span>
-      {data.map((project) => (
-        <ProjectItem key={project.href} {...project} />
-      ))}
+    <section className="enter flex flex-col gap-1 [--enter-index:3]">
+      <h2 className="font-medium">Projects</h2>
+      <LinkList>
+        {data.map((project) => (
+          <LinkListItem key={project.href} href={project.href} description={project.description}>
+            {project.title}
+          </LinkListItem>
+        ))}
+      </LinkList>
     </section>
   );
 };

@@ -1,16 +1,10 @@
-import Link from "next/link";
+import { LinkList, LinkListItem } from "@/components/link-list";
 
-export interface Project {
-  title: string;
-  company: string;
-  href: string;
-}
-
-const data: Project[] = [
+const data = [
   {
     title: "Software Developer II",
     href: "https://www.rfsmart.com/",
-    company: "RF-SMART",
+    company: "RF‑SMART",
   },
   {
     title: "Associate Software Engineer",
@@ -24,22 +18,17 @@ const data: Project[] = [
   },
 ];
 
-const Work = ({ title, company, href }: Project) => {
-  return (
-    <Link href={href} target="_blank" className="p-3 rounded-md hover:bg-[#F5F4F4] -mx-3">
-      <span>{title}</span>
-      <p className="text-[#63635E]">{company}</p>
-    </Link>
-  );
-};
-
 export const Works = () => {
   return (
-    <section className="flex flex-col gap-4">
-      <span className="font-medium">Work</span>
-      {data.map((project) => (
-        <Work key={project.href} {...project} />
-      ))}
+    <section className="enter flex flex-col gap-1 [--enter-index:2]">
+      <h2 className="font-medium">Work</h2>
+      <LinkList>
+        {data.map((work) => (
+          <LinkListItem key={work.href} href={work.href} description={work.company}>
+            {work.title}
+          </LinkListItem>
+        ))}
+      </LinkList>
     </section>
   );
 };

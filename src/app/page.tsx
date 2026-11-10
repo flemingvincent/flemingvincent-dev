@@ -6,12 +6,14 @@ import { More } from "@/components/more";
 
 export default function Home() {
   return (
-    <div className="flex flex-col w-full max-w-2xl gap-32 px-6 py-16">
+    <div className="flex w-full max-w-2xl flex-col gap-20 px-6 py-16 sm:gap-28">
       <Header />
-      <Today />
-      <Works />
-      <Projects />
-      <More />
+      <main className="flex flex-col gap-20 sm:gap-28">
+        <Today />
+        <Works />
+        <Projects />
+        <More />
+      </main>
     </div>
   );
 }
